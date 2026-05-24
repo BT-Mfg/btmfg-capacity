@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-24T12:53:04.477855+00:00",
+  "generated_at": "2026-05-24T13:18:43.033679+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 54570.77,
   "overdue_total": 11205.0,
-  "missing_count": 10,
-  "card_count": 74,
+  "missing_count": 6,
+  "card_count": 70,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -79,9 +79,9 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 15,
+      "card_count": 12,
       "value": 8875.0,
-      "missing": 3
+      "missing": 0
     },
     {
       "list_id": "62e926e0ad2344544b0e7ed9",
@@ -89,13 +89,6 @@
       "card_count": 4,
       "value": 1550.0,
       "missing": 0
-    },
-    {
-      "list_id": "6706baf43a47f28cfbd8ae7e",
-      "list_name": "Save For Later",
-      "card_count": 1,
-      "value": 0.0,
-      "missing": 1
     }
   ],
   "by_customer": [
@@ -107,9 +100,9 @@
     },
     {
       "customer": "Other",
-      "card_count": 10,
+      "card_count": 6,
       "value": 0.0,
-      "missing": 10
+      "missing": 6
     }
   ],
   "cards": [
@@ -1436,82 +1429,6 @@
       "part": null,
       "due": null,
       "overdue": false,
-      "value": null,
-      "qty": null,
-      "unit_price": null,
-      "description": null,
-      "status": "no_po_number_in_name",
-      "source": null
-    },
-    {
-      "card_id": "65cfb8b242e68ac1cf793d06",
-      "name": "Jet Boat Weld in Ports",
-      "url": "https://trello.com/c/10HECbfs/550-jet-boat-weld-in-ports",
-      "list_id": "6706baf43a47f28cfbd8ae7e",
-      "list_name": "Save For Later",
-      "customer": "Other",
-      "po_number": null,
-      "line": null,
-      "part": null,
-      "due": null,
-      "overdue": false,
-      "value": null,
-      "qty": null,
-      "unit_price": null,
-      "description": null,
-      "status": "no_po_number_in_name",
-      "source": null
-    },
-    {
-      "card_id": "69d64747deb819c0a995d1fc",
-      "name": "Jeff Wolf Mandrel 1.0",
-      "url": "https://trello.com/c/YFhmNIv3/1856-jeff-wolf-mandrel-10",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Other",
-      "po_number": null,
-      "line": null,
-      "part": "1FRPFlangeMold",
-      "due": "2026-04-24T19:07:00.000Z",
-      "overdue": true,
-      "value": null,
-      "qty": null,
-      "unit_price": null,
-      "description": null,
-      "status": "no_po_number_in_name",
-      "source": null
-    },
-    {
-      "card_id": "69dfe54b0de56fcaf630b6c5",
-      "name": "Jeff Wolf Mandrel 1.5",
-      "url": "https://trello.com/c/Q2OS0YG2/1860-jeff-wolf-mandrel-15",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Other",
-      "po_number": null,
-      "line": null,
-      "part": "15FRPFlangeMold",
-      "due": "2026-04-24T19:07:00.000Z",
-      "overdue": true,
-      "value": null,
-      "qty": null,
-      "unit_price": null,
-      "description": null,
-      "status": "no_po_number_in_name",
-      "source": null
-    },
-    {
-      "card_id": "69dfe54ea5a21d4cc5a431c6",
-      "name": "Jeff Wolf Mandrel 2.0",
-      "url": "https://trello.com/c/kwomgZ5m/1861-jeff-wolf-mandrel-20",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Other",
-      "po_number": null,
-      "line": null,
-      "part": "2FRPFlangeMold",
-      "due": "2026-04-24T19:07:00.000Z",
-      "overdue": true,
       "value": null,
       "qty": null,
       "unit_price": null,
