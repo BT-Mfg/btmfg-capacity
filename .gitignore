@@ -1,0 +1,32 @@
+# Secrets — never commit
+.env
+gmail_credentials.json
+token.json
+
+# Cached PO PDFs and dashboard scratch
+po_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual envs
+venv/
+.venv/
+env/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local logs and caches
+*.log
+.cache/
+launchd/*.log

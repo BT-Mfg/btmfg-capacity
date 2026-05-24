@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>BT MFG — Capacity Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f7fa;
+    color: #111827;
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+  h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.02em; }
+  .subtitle { color: #6b7280; margin-bottom: 20px; font-size: 14px; }
+  .subtitle a { color: #2563eb; text-decoration: none; }
+  .subtitle a:hover { text-decoration: underline; }
+  button {
+    background: #2563eb; color: white; border: none; padding: 9px 18px;
+    border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 14px;
+  }
+  button:hover { background: #1d4ed8; }
+  button.secondary { background: #fff; color: #374151; border: 1px solid #d1d5db; }
+  button.secondary:hover { background: #f9fafb; }
+  .topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; gap: 12px; flex-wrap: wrap; }
+  .last-refresh { color: #6b7280; font-size: 13px; }
+  .machine-row { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+  .machine-row.collapsed .machine-cards { display: none; }
+  .machine-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; user-select: none; gap: 12px; }
+  .machine-name { font-weight: 700; font-size: 16px; flex: 1; }
+  .machine-meta { display: flex; gap: 16px; font-size: 13px; color: #4b5563; align-items: center; }
+  .machine-meta span b { color: #111827; font-size: 14px; }
+  .status { padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .status-green { background: #d1fae5; color: #065f46; }
+  .status-yellow { background: #fef3c7; color: #92400e; }
+  .status-red { background: #fee2e2; color: #991b1b; }
+  .status-empty { background: #e5e7eb; color: #6b7280; }
+  .machine-cards { margin-top: 12px; padding-top: 12px; border-top: 1px solid #f3f4f6; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font-weight: 600; color: #6b7280; padding: 6px 8px; border-bottom: 1px solid #e5e7eb; }
+  td { padding: 6px 8px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+  td.right { text-align: right; }
+  .pill-due { padding: 2px 8px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+  .pill-overdue { background: #fee2e2; color: #991b1b; }
+  .pill-soon { background: #fef3c7; color: #92400e; }
+  .error { background: #fef2f2; color: #991b1b; padding: 14px; border-radius: 8px; border: 1px solid #fecaca; margin-bottom: 16px; }
+  .empty { color: #9ca3af; font-style: italic; padding: 20px; text-align: center; }
+  .notice { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; padding: 12px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 14px; }
+  .chart-wrap { background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; padding: 18px; margin-top: 16px; }
+  .chart-wrap h2 { margin: 0 0 12px; font-size: 16px; }
+  canvas { max-height: 320px; }
+  .legend { display: flex; gap: 16px; font-size: 12px; color: #6b7280; margin-top: 12px; flex-wrap: wrap; }
+  .legend-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  .toggle-icon { color: #6b7280; font-size: 12px; }
+  a.card-link { color: #2563eb; text-decoration: none; }
+  a.card-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>BT MFG — Capacity Dashboard</h1>
+<div class="subtitle">Live machine load from <a href="https://trello.com/b/YG0Dh7Kp/job-trackers-bt-mfg" target="_blank">Job Trackers BT MFG</a> &middot; Hours queued per column &middot; Auto-refreshes every 60 seconds</div>
+
+<div class="topbar">
+  <div class="last-refresh" id="last-refresh">Loading…</div>
+  <div style="display:flex;gap:8px">
+    <button onclick="loadDashboard()">↻ Refresh now</button>
+  </div>
+</div>
+
+<div id="notice-pane"></div>
+<div id="error-pane"></div>
+<div id="summary-pane"></div>
+<div id="chart-pane"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js"></script>
+
+<script>
+let chart = null;
+let refreshTimer = null;
+
+async function loadDashboard() {
+  document.getElementById('error-pane').innerHTML = '';
+  if (!document.getElementById('summary-pane').innerHTML) {
+    document.getElementById('summary-pane').innerHTML = '<div class="empty">Loading from Trello…</div>';
+  }
+  try {
+    const r = await fetch('/api/capacity');
+    if (!r.ok) {
+      const body = await r.json().catch(() => ({}));
+      throw new Error(body.error || `HTTP ${r.status}`);
+    }
+    const data = await r.json();
+    render(data);
+    const ts = new Date().toLocaleString();
+    document.getElementById('last-refresh').textContent = 'Last refreshed: ' + ts;
+  } catch (err) {
+    showError(err.message || String(err));
+  }
+}
+
+function showError(msg) {
+  document.getElementById('error-pane').innerHTML =
+    `<div class="error"><b>Error:</b> ${escapeHtml(msg)}</div>`;
+}
+
+function render(data) {
+  const noticePane = document.getElementById('notice-pane');
+  if (!data.has_real_field_data) {
+    noticePane.innerHTML = `<div class="notice"><b>Heads up:</b> No Setup/Cycle minute fields detected on cards. Showing ${data.thresholds.default_min} min/card by default. Add Trello Custom Fields named "Setup min", "Cycle min", and "Qty" to get real estimates.</div>`;
+  } else {
+    noticePane.innerHTML = '';
+  }
+
+  let html = '';
+  for (const col of data.columns) {
+    const id = 'col_' + col.id;
+    html += `
+      <div class="machine-row collapsed" id="${id}">
+        <div class="machine-header" onclick="document.getElementById('${id}').classList.toggle('collapsed')">
+          <div class="machine-name">${escapeHtml(col.name)}</div>
+          <div class="machine-meta">
+            <span><b>${col.card_count}</b> cards</span>
+            <span><b>${col.total_hours}</b> hrs</span>
+            <span><b>${col.days_at_capacity}</b> days</span>
+            <span class="status status-${col.status}">${col.status === 'empty' ? 'Empty' : col.status === 'green' ? 'OK' : col.status === 'yellow' ? 'Warning' : 'Overloaded'}</span>
+            <span class="toggle-icon">▾</span>
+          </div>
+        </div>
+        <div class="machine-cards">
+          ${col.cards.length === 0 ? '<div class="empty">No cards in this column.</div>' : renderCardTable(col.cards)}
+        </div>
+      </div>`;
+  }
+  document.getElementById('summary-pane').innerHTML = html;
+  renderChart(data);
+}
+
+function renderCardTable(cards) {
+  let html = '<table><thead><tr><th>Card</th><th>Due</th><th class="right">Min</th><th class="right">Hrs</th></tr></thead><tbody>';
+  for (const c of cards) {
+    const due = dueBadge(c.due);
+    html += `<tr>
+      <td><a class="card-link" href="${c.url}" target="_blank">${escapeHtml(c.name)}</a></td>
+      <td>${fmtDue(c.due)}${due ? ' <span class="pill-due ' + due.cls + '">' + due.label + '</span>' : ''}</td>
+      <td class="right">${Math.round(c.minutes)}</td>
+      <td class="right">${(c.minutes/60).toFixed(1)}</td>
+    </tr>`;
+  }
+  return html + '</tbody></table>';
+}
+
+function fmtDue(s) {
+  if (!s) return '—';
+  return new Date(s).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
+
+function dueBadge(s) {
+  if (!s) return null;
+  const days = (new Date(s) - new Date()) / 86400000;
+  if (days < 0) return { cls: 'pill-overdue', label: 'Overdue ' + Math.ceil(-days) + 'd' };
+  if (days < 7) return { cls: 'pill-soon', label: 'Due ' + Math.ceil(days) + 'd' };
+  return null;
+}
+
+function escapeHtml(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g,
+    ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+function renderChart(data) {
+  const t = data.thresholds;
+  const filtered = data.columns.filter(c => c.card_count > 0);
+  const labels = filtered.map(c => c.name);
+  const values = filtered.map(c => c.total_hours);
+  const colors = filtered.map(c => {
+    if (c.status === 'green') return '#10b981';
+    if (c.status === 'yellow') return '#f59e0b';
+    if (c.status === 'red') return '#ef4444';
+    return '#e5e7eb';
+  });
+
+  document.getElementById('chart-pane').innerHTML = `
+    <div class="chart-wrap">
+      <h2>Hours queued per column</h2>
+      <canvas id="chart-canvas"></canvas>
+      <div class="legend">
+        <span><span class="legend-dot" style="background:#10b981"></span>OK (&lt; ${t.yellow}h)</span>
+        <span><span class="legend-dot" style="background:#f59e0b"></span>Warning (${t.yellow}–${t.red}h)</span>
+        <span><span class="legend-dot" style="background:#ef4444"></span>Overloaded (&gt; ${t.red}h)</span>
+      </div>
+    </div>`;
+
+  if (chart) chart.destroy();
+  chart = new Chart(document.getElementById('chart-canvas').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{ label: 'Hours queued', data: values, backgroundColor: colors, borderRadius: 4 }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        y: { beginAtZero: true, title: { display: true, text: 'Hours' } },
+        x: { ticks: { autoSkip: false, maxRotation: 45, minRotation: 30 } },
+      },
+    },
+  });
+}
+
+// Boot + auto-refresh
+loadDashboard();
+refreshTimer = setInterval(loadDashboard, 60000);
+</script>
+
+</body>
+</html>

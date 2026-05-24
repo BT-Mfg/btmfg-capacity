@@ -1,0 +1,8 @@
+flask>=3.0
+requests>=2.31
+python-dotenv>=1.0
+# Value dashboard
+PyMuPDF>=1.24
+google-api-python-client>=2.130
+google-auth>=2.30
+google-auth-oauthlib>=1.2

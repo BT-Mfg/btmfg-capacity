@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BT MFG — Work in Process $</title>
+  <style>
+    :root {
+      --bg:#0f1216; --panel:#171b22; --panel2:#1d222b; --line:#262d38;
+      --text:#e6e9ef; --dim:#9aa3b2; --accent:#3da9fc; --good:#3ddc97;
+      --warn:#f0b429; --bad:#ef4444;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; padding:0; font:14px/1.45 -apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+      background:var(--bg); color:var(--text);
+    }
+    .wrap { max-width:1100px; margin:0 auto; padding:24px; }
+    header {
+      display:flex; justify-content:space-between; align-items:baseline;
+      margin-bottom:20px; gap:16px; flex-wrap:wrap;
+    }
+    h1 { font-size:20px; margin:0; font-weight:600; letter-spacing:.2px; }
+    .updated { color:var(--dim); font-size:12px; }
+    .hero {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:12px; margin-bottom:22px;
+    }
+    .stat {
+      background:var(--panel); border:1px solid var(--line); border-radius:10px;
+      padding:18px 20px;
+    }
+    .stat .label { color:var(--dim); font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+    .stat .num   { font-size:30px; font-weight:600; margin-top:6px; }
+    .stat.overdue .num { color:var(--bad); }
+    .stat.missing .num { color:var(--warn); }
+    section { margin-bottom:24px; }
+    h2 { font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--dim); margin:0 0 10px; font-weight:600; }
+    .panel {
+      background:var(--panel); border:1px solid var(--line); border-radius:10px;
+      overflow:hidden;
+    }
+    table { width:100%; border-collapse:collapse; }
+    th, td { padding:10px 14px; text-align:left; font-size:13px; border-bottom:1px solid var(--line); }
+    th { background:var(--panel2); color:var(--dim); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:.06em; }
+    tr:last-child td { border-bottom:0; }
+    .num-cell { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+    .row-link td:first-child a { color:var(--accent); text-decoration:none; }
+    .row-link td:first-child a:hover { text-decoration:underline; }
+    .pill { display:inline-block; padding:2px 8px; border-radius:999px; font-size:11px; }
+    .pill.ok      { background:rgba(61,220,151,.12); color:var(--good); }
+    .pill.missing { background:rgba(240,180,41,.14); color:var(--warn); }
+    .pill.err     { background:rgba(239,68,68,.14);  color:var(--bad);  }
+    .overdue { color:var(--bad); }
+    footer { color:var(--dim); font-size:11px; margin-top:30px; text-align:center; }
+    .loading, .error {
+      text-align:center; padding:60px 20px; color:var(--dim);
+    }
+    .error { color:var(--bad); }
+    /* password gate */
+    .gate {
+      position:fixed; inset:0; background:var(--bg);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .gate form {
+      background:var(--panel); border:1px solid var(--line); border-radius:10px;
+      padding:28px 30px; min-width:300px;
+    }
+    .gate h2 { color:var(--text); margin:0 0 14px; text-transform:none; letter-spacing:0; font-size:16px; }
+    .gate input {
+      width:100%; padding:10px 12px; border-radius:6px; border:1px solid var(--line);
+      background:var(--panel2); color:var(--text); font-size:14px; margin-bottom:10px;
+    }
+    .gate button {
+      width:100%; padding:10px 12px; border-radius:6px; border:0;
+      background:var(--accent); color:#001a2a; font-size:14px; font-weight:600;
+      cursor:pointer;
+    }
+    .gate .err { color:var(--bad); font-size:12px; min-height:16px; }
+  </style>
+</head>
+<body>
+<div id="gate" class="gate" hidden>
+  <form id="gate-form">
+    <h2>BT MFG dashboard</h2>
+    <input id="gate-input" type="password" placeholder="Password" autocomplete="current-password" autofocus />
+    <button type="submit">Enter</button>
+    <div id="gate-err" class="err"></div>
+  </form>
+</div>
+
+<div class="wrap" id="app" hidden>
+  <header>
+    <h1>Work in process — $ on the board</h1>
+    <div class="updated" id="updated">loading…</div>
+  </header>
+
+  <div class="hero">
+    <div class="stat"><div class="label">Grand total</div><div class="num" id="grand">—</div></div>
+    <div class="stat overdue"><div class="label">Overdue $</div><div class="num" id="overdue">—</div></div>
+    <div class="stat"><div class="label">Active cards</div><div class="num" id="count">—</div></div>
+    <div class="stat missing"><div class="label">Missing PO match</div><div class="num" id="missing">—</div></div>
+  </div>
+
+  <section>
+    <h2>By list / stage</h2>
+    <div class="panel"><table>
+      <thead><tr>
+        <th>List</th>
+        <th class="num-cell">Cards</th>
+        <th class="num-cell">Missing</th>
+        <th class="num-cell">Value</th>
+      </tr></thead>
+      <tbody id="by-list"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>By customer</h2>
+    <div class="panel"><table>
+      <thead><tr>
+        <th>Customer</th>
+        <th class="num-cell">Cards</th>
+        <th class="num-cell">Missing</th>
+        <th class="num-cell">Value</th>
+      </tr></thead>
+      <tbody id="by-customer"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>Cards (highest $ first)</h2>
+    <div class="panel"><table>
+      <thead><tr>
+        <th>Card</th>
+        <th>List</th>
+        <th>Customer</th>
+        <th>PO / Line</th>
+        <th>Part</th>
+        <th>Description</th>
+        <th class="num-cell">Qty</th>
+        <th class="num-cell">Unit $</th>
+        <th class="num-cell">Value</th>
+        <th>Due</th>
+        <th>Status</th>
+      </tr></thead>
+      <tbody id="cards"></tbody>
+    </table></div>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+
+<div class="loading" id="loading">Loading dashboard…</div>
+<div class="error" id="error" hidden></div>
+
+<script src="auth.js?_=1"></script>
+<script>
+// --- password gate -------------------------------------------------------
+// PW_HASH is defined in auth.js, which update_dashboard.py writes from
+// DASHBOARD_PASSWORD in .env. If auth.js is missing or PW_HASH is empty,
+// the gate is bypassed and the dashboard is fully public.
+const PW_HASH = (window.PW_HASH || "").trim();
+const PW_KEY  = "btmfg-dashboard-auth-v1";
+
+async function sha256(s) {
+  const b = new TextEncoder().encode(s);
+  const h = await crypto.subtle.digest("SHA-256", b);
+  return Array.from(new Uint8Array(h)).map(x => x.toString(16).padStart(2,"0")).join("");
+}
+
+async function init() {
+  if (PW_HASH) {
+    const saved = localStorage.getItem(PW_KEY);
+    if (saved === PW_HASH) {
+      document.getElementById("app").hidden = false;
+      loadData();
+    } else {
+      document.getElementById("loading").hidden = true;
+      const gate = document.getElementById("gate");
+      gate.hidden = false;
+      document.getElementById("gate-form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const v = document.getElementById("gate-input").value;
+        const h = await sha256(v);
+        if (h === PW_HASH) {
+          localStorage.setItem(PW_KEY, h);
+          gate.hidden = true;
+          document.getElementById("app").hidden = false;
+          loadData();
+        } else {
+          document.getElementById("gate-err").textContent = "Wrong password.";
+        }
+      });
+    }
+  } else {
+    document.getElementById("app").hidden = false;
+    loadData();
+  }
+}
+
+// --- data load + render --------------------------------------------------
+function fmt$(n) {
+  if (n === null || n === undefined) return "—";
+  return "$" + Number(n).toLocaleString(undefined, {
+    minimumFractionDigits: 2, maximumFractionDigits: 2
+  });
+}
+function fmtDate(s) {
+  if (!s) return "";
+  try { return new Date(s).toLocaleDateString(undefined, {month:"short",day:"numeric"}); }
+  catch (_) { return s; }
+}
+function fmtRelTime(s) {
+  if (!s) return "";
+  const d = new Date(s);
+  const secs = Math.round((Date.now() - d.getTime())/1000);
+  if (secs < 60)   return `${secs}s ago`;
+  if (secs < 3600) return `${Math.round(secs/60)}m ago`;
+  if (secs < 86400) return `${Math.round(secs/3600)}h ago`;
+  return `${Math.round(secs/86400)}d ago`;
+}
+function pill(status) {
+  if (status === "ok")
+    return '<span class="pill ok">ok</span>';
+  if (status === "no_po_found" || status === "line_not_found_in_po" || status === "no_po_number_in_name")
+    return `<span class="pill missing">${status.replace(/_/g," ")}</span>`;
+  return `<span class="pill err">${status}</span>`;
+}
+
+async function loadData() {
+  const loading = document.getElementById("loading");
+  const errEl = document.getElementById("error");
+  try {
+    // Cache-bust so we always see the freshest GitHub Pages publish.
+    const res = await fetch(`dashboard.json?_=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    render(data);
+    loading.hidden = true;
+  } catch (e) {
+    loading.hidden = true;
+    errEl.hidden = false;
+    errEl.textContent = "Failed to load dashboard.json: " + e.message;
+  }
+}
+
+function render(d) {
+  document.getElementById("grand").textContent    = fmt$(d.grand_total);
+  document.getElementById("overdue").textContent  = fmt$(d.overdue_total);
+  document.getElementById("count").textContent    = d.card_count;
+  document.getElementById("missing").textContent  = d.missing_count;
+  document.getElementById("updated").textContent  =
+    "updated " + fmtRelTime(d.generated_at) + " · " + new Date(d.generated_at).toLocaleString();
+
+  // By list
+  const byList = document.getElementById("by-list");
+  byList.innerHTML = d.by_list.map(b => `
+    <tr>
+      <td>${escape(b.list_name)}</td>
+      <td class="num-cell">${b.card_count}</td>
+      <td class="num-cell">${b.missing ? '<span class="overdue">'+b.missing+'</span>' : '0'}</td>
+      <td class="num-cell">${fmt$(b.value)}</td>
+    </tr>`).join("");
+
+  // By customer
+  const byCustomer = document.getElementById("by-customer");
+  byCustomer.innerHTML = d.by_customer.map(b => `
+    <tr>
+      <td>${escape(b.customer)}</td>
+      <td class="num-cell">${b.card_count}</td>
+      <td class="num-cell">${b.missing || 0}</td>
+      <td class="num-cell">${fmt$(b.value)}</td>
+    </tr>`).join("");
+
+  // Cards
+  const cards = document.getElementById("cards");
+  cards.innerHTML = d.cards.map(r => `
+    <tr class="row-link${r.overdue ? ' overdue' : ''}">
+      <td><a href="${r.url}" target="_blank" rel="noopener">${escape(r.name)}</a></td>
+      <td>${escape(r.list_name)}</td>
+      <td>${escape(r.customer)}</td>
+      <td>${r.po_number ? `${r.po_number} / ${r.line ?? ''}` : '—'}</td>
+      <td>${escape(r.part || '')}</td>
+      <td>${escape(r.description || '')}</td>
+      <td class="num-cell">${r.qty ?? ''}</td>
+      <td class="num-cell">${r.unit_price !== null ? fmt$(r.unit_price) : ''}</td>
+      <td class="num-cell${r.overdue ? ' overdue' : ''}">${r.value !== null ? fmt$(r.value) : ''}</td>
+      <td>${fmtDate(r.due)}</td>
+      <td>${pill(r.status)}</td>
+    </tr>`).join("");
+
+  document.getElementById("footer").textContent =
+    `${d.card_count} active cards · board ${d.board_id}`;
+}
+
+function escape(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+
+// kick off
+init();
+</script>
+</body>
+</html>
