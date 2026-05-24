@@ -80,16 +80,7 @@
   </style>
 </head>
 <body>
-<div id="gate" class="gate" hidden>
-  <form id="gate-form">
-    <h2>BT MFG dashboard</h2>
-    <input id="gate-input" type="password" placeholder="Password" autocomplete="current-password" autofocus />
-    <button type="submit">Enter</button>
-    <div id="gate-err" class="err"></div>
-  </form>
-</div>
-
-<div class="wrap" id="app" hidden>
+<div class="wrap" id="app">
   <header>
     <h1>Work in process — $ on the board</h1>
     <div class="updated" id="updated">loading…</div>
@@ -154,49 +145,10 @@
 <div class="loading" id="loading">Loading dashboard…</div>
 <div class="error" id="error" hidden></div>
 
-<script src="auth.js?_=1"></script>
 <script>
-// --- password gate -------------------------------------------------------
-// PW_HASH is defined in auth.js, which update_dashboard.py writes from
-// DASHBOARD_PASSWORD in .env. If auth.js is missing or PW_HASH is empty,
-// the gate is bypassed and the dashboard is fully public.
-const PW_HASH = (window.PW_HASH || "").trim();
-const PW_KEY  = "btmfg-dashboard-auth-v1";
-
-async function sha256(s) {
-  const b = new TextEncoder().encode(s);
-  const h = await crypto.subtle.digest("SHA-256", b);
-  return Array.from(new Uint8Array(h)).map(x => x.toString(16).padStart(2,"0")).join("");
-}
-
+// Public dashboard — no gate. Auto-load on every visit.
 async function init() {
-  if (PW_HASH) {
-    const saved = localStorage.getItem(PW_KEY);
-    if (saved === PW_HASH) {
-      document.getElementById("app").hidden = false;
-      loadData();
-    } else {
-      document.getElementById("loading").hidden = true;
-      const gate = document.getElementById("gate");
-      gate.hidden = false;
-      document.getElementById("gate-form").addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const v = document.getElementById("gate-input").value;
-        const h = await sha256(v);
-        if (h === PW_HASH) {
-          localStorage.setItem(PW_KEY, h);
-          gate.hidden = true;
-          document.getElementById("app").hidden = false;
-          loadData();
-        } else {
-          document.getElementById("gate-err").textContent = "Wrong password.";
-        }
-      });
-    }
-  } else {
-    document.getElementById("app").hidden = false;
-    loadData();
-  }
+  loadData();
 }
 
 // --- data load + render --------------------------------------------------
