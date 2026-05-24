@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-05-24T13:31:33.926232+00:00",
+  "generated_at": "2026-05-24T14:40:12.621438+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 54570.77,
-  "overdue_total": 11205.0,
+  "grand_total": 52575.77,
+  "overdue_total": 9275.0,
   "missing_count": 0,
-  "card_count": 64,
+  "card_count": 57,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ecc",
@@ -37,8 +37,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 9,
-      "value": 9105.0,
+      "card_count": 8,
+      "value": 9025.0,
       "missing": 0
     },
     {
@@ -58,23 +58,16 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 12,
-      "value": 8875.0,
-      "missing": 0
-    },
-    {
-      "list_id": "62e926e0ad2344544b0e7ed9",
-      "list_name": "Ready to Ship",
-      "card_count": 4,
-      "value": 1550.0,
+      "card_count": 10,
+      "value": 8510.0,
       "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 64,
-      "value": 54570.77,
+      "card_count": 57,
+      "value": 52575.77,
       "missing": 0
     }
   ],
@@ -460,25 +453,6 @@
       "source": "po-file(line)"
     },
     {
-      "card_id": "69fb96624f5adfc9e53c5858",
-      "name": "SUN PO 385306 Line 1",
-      "url": "https://trello.com/c/twGEVlEj/1913-sun-po-385306-line-1",
-      "list_id": "62e926e0ad2344544b0e7ed9",
-      "list_name": "Ready to Ship",
-      "customer": "Sun Automation",
-      "po_number": "385306",
-      "line": 1,
-      "part": "11139800",
-      "due": "2026-05-22T18:50:00.000Z",
-      "overdue": true,
-      "value": 900.0,
-      "qty": 4.0,
-      "unit_price": 225.0,
-      "description": "(PNTM) BLOCK HATCH HINGE PE SUN to Coat",
-      "status": "ok",
-      "source": "po-file(line)"
-    },
-    {
       "card_id": "69f0e5e9e51899c0cde95860",
       "name": "SUN PO 385071 Line 2",
       "url": "https://trello.com/c/qYMwHopt/1905-sun-po-385071-line-2",
@@ -821,25 +795,6 @@
       "source": "po-file(line)"
     },
     {
-      "card_id": "69fb966da555093de1c7527e",
-      "name": "SUN PO 385306 Line 5",
-      "url": "https://trello.com/c/eQLUfSJy/1917-sun-po-385306-line-5",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Sun Automation",
-      "po_number": "385306",
-      "line": 5,
-      "part": "12227400",
-      "due": "2026-05-22T18:50:00.000Z",
-      "overdue": true,
-      "value": 300.0,
-      "qty": 4.0,
-      "unit_price": 75.0,
-      "description": "MOUNT GAS SPRING ROOF",
-      "status": "ok",
-      "source": "po-file(line)"
-    },
-    {
       "card_id": "698dcb95743f398371d6b372",
       "name": "SUN PO 382810 Line 1",
       "url": "https://trello.com/c/KTZLiZQT/1792-sun-po-382810-line-1",
@@ -973,44 +928,6 @@
       "source": "po-file(line)"
     },
     {
-      "card_id": "69fb9664bff465be827fa86a",
-      "name": "SUN PO 385306 Line 2",
-      "url": "https://trello.com/c/YIJ4NuNg/1914-sun-po-385306-line-2",
-      "list_id": "62e926e0ad2344544b0e7ed9",
-      "list_name": "Ready to Ship",
-      "customer": "Sun Automation",
-      "po_number": "385306",
-      "line": 2,
-      "part": "11139900",
-      "due": "2026-05-22T18:50:00.000Z",
-      "overdue": true,
-      "value": 250.0,
-      "qty": 2.0,
-      "unit_price": 125.0,
-      "description": "PLATE HATCH LATCH MOUNTING",
-      "status": "ok",
-      "source": "po-file(line)"
-    },
-    {
-      "card_id": "69fb967a838b8335cb2d8332",
-      "name": "SUN PO 385306 Line 10",
-      "url": "https://trello.com/c/W7e6V7R1/1922-sun-po-385306-line-10",
-      "list_id": "62e926e0ad2344544b0e7ed9",
-      "list_name": "Ready to Ship",
-      "customer": "Sun Automation",
-      "po_number": "385306",
-      "line": 10,
-      "part": "12228900",
-      "due": "2026-05-22T18:50:00.000Z",
-      "overdue": true,
-      "value": 240.0,
-      "qty": 2.0,
-      "unit_price": 120.0,
-      "description": "BRACKET PROX SENSOR HATCH",
-      "status": "ok",
-      "source": "po-file(line)"
-    },
-    {
       "card_id": "6a108a95d7d6b0effc1a547b",
       "name": "SUN PO 385771 Line 5",
       "url": "https://trello.com/c/aC7V9HC8/1949-sun-po-385771-line-5",
@@ -1104,25 +1021,6 @@
       "description": "(PNTM) STANDOFF GUARD  DS HDDC SUN to Coat",
       "status": "ok",
       "source": "po-file(part)"
-    },
-    {
-      "card_id": "69fb96694085ce20d2e87bec",
-      "name": "SUN PO 385306 Line 3",
-      "url": "https://trello.com/c/UjMBX78X/1915-sun-po-385306-line-3",
-      "list_id": "62e926e0ad2344544b0e7ed9",
-      "list_name": "Ready to Ship",
-      "customer": "Sun Automation",
-      "po_number": "385306",
-      "line": 3,
-      "part": "11147600",
-      "due": "2026-05-22T18:50:00.000Z",
-      "overdue": true,
-      "value": 160.0,
-      "qty": 4.0,
-      "unit_price": 40.0,
-      "description": "(PNT) SPACER HINGE DOOR INK CA SUN to Coat",
-      "status": "ok",
-      "source": "po-file(line)"
     },
     {
       "card_id": "69d63ac29144c40985949879",
@@ -1239,25 +1137,6 @@
       "source": "po-file(line)"
     },
     {
-      "card_id": "6a04d47cef384329939ab9d0",
-      "name": "SUN PO 385544 Line 2",
-      "url": "https://trello.com/c/NXPL7b4Q/1935-sun-po-385544-line-2",
-      "list_id": "62e926e0ad2344544b0e7ed5",
-      "list_name": "VM2 (Doosan DNM4500)",
-      "customer": "Sun Automation",
-      "po_number": "385544",
-      "line": 2,
-      "part": "806053",
-      "due": "2026-05-22T18:50:00.000Z",
-      "overdue": true,
-      "value": 80.0,
-      "qty": 2.0,
-      "unit_price": 40.0,
-      "description": "SPACER RAIL",
-      "status": "ok",
-      "source": "po-file(line)"
-    },
-    {
       "card_id": "69fb96720cabcebb4dd06846",
       "name": "SUN PO 385306 Line 7",
       "url": "https://trello.com/c/k81ZEKFU/1919-sun-po-385306-line-7",
@@ -1273,25 +1152,6 @@
       "qty": 1.0,
       "unit_price": 73.57,
       "description": "WASHER",
-      "status": "ok",
-      "source": "po-file(line)"
-    },
-    {
-      "card_id": "6a04d4698459bb5dd6d37d3e",
-      "name": "SUN PO 385530 Line 1",
-      "url": "https://trello.com/c/etAI59Qr/1933-sun-po-385530-line-1",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Sun Automation",
-      "po_number": "385530",
-      "line": 1,
-      "part": "40501108",
-      "due": "2026-05-27T18:50:00.000Z",
-      "overdue": false,
-      "value": 65.0,
-      "qty": 1.0,
-      "unit_price": 65.0,
-      "description": "PLATE LOWER RETAINER GS",
       "status": "ok",
       "source": "po-file(line)"
     }
