@@ -42,7 +42,10 @@
     }
     table { width:100%; border-collapse:collapse; }
     th, td { padding:10px 14px; text-align:left; font-size:13px; border-bottom:1px solid var(--line); }
-    th { background:var(--panel2); color:var(--dim); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:.06em; }
+    th { background:var(--panel2); color:var(--dim); font-weight:500; text-transform:uppercase; font-size:11px; letter-spacing:.06em; cursor:pointer; user-select:none; position:relative; }
+    th:hover { color:var(--text); }
+    th.sorted-asc::after  { content:" ▲"; color:var(--accent); }
+    th.sorted-desc::after { content:" ▼"; color:var(--accent); }
     tr:last-child td { border-bottom:0; }
     .num-cell { text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
     .row-link td:first-child a { color:var(--accent); text-decoration:none; }
@@ -95,12 +98,12 @@
 
   <section>
     <h2>By list / stage</h2>
-    <div class="panel"><table>
+    <div class="panel"><table id="t-by-list">
       <thead><tr>
-        <th>List</th>
-        <th class="num-cell">Cards</th>
-        <th class="num-cell">Missing</th>
-        <th class="num-cell">Value</th>
+        <th data-key="list_name" data-type="text">List</th>
+        <th data-key="card_count" data-type="num" class="num-cell">Cards</th>
+        <th data-key="missing"    data-type="num" class="num-cell">Missing</th>
+        <th data-key="value"      data-type="num" class="num-cell">Value</th>
       </tr></thead>
       <tbody id="by-list"></tbody>
     </table></div>
@@ -108,32 +111,32 @@
 
   <section>
     <h2>By customer</h2>
-    <div class="panel"><table>
+    <div class="panel"><table id="t-by-customer">
       <thead><tr>
-        <th>Customer</th>
-        <th class="num-cell">Cards</th>
-        <th class="num-cell">Missing</th>
-        <th class="num-cell">Value</th>
+        <th data-key="customer"   data-type="text">Customer</th>
+        <th data-key="card_count" data-type="num" class="num-cell">Cards</th>
+        <th data-key="missing"    data-type="num" class="num-cell">Missing</th>
+        <th data-key="value"      data-type="num" class="num-cell">Value</th>
       </tr></thead>
       <tbody id="by-customer"></tbody>
     </table></div>
   </section>
 
   <section>
-    <h2>Cards (highest $ first)</h2>
-    <div class="panel"><table>
+    <h2>Cards</h2>
+    <div class="panel"><table id="t-cards">
       <thead><tr>
-        <th>Card</th>
-        <th>List</th>
-        <th>Customer</th>
-        <th>PO / Line</th>
-        <th>Part</th>
-        <th>Description</th>
-        <th class="num-cell">Qty</th>
-        <th class="num-cell">Unit $</th>
-        <th class="num-cell">Value</th>
-        <th>Due</th>
-        <th>Status</th>
+        <th data-key="name"        data-type="text">Card</th>
+        <th data-key="list_name"   data-type="text">List</th>
+        <th data-key="customer"    data-type="text">Customer</th>
+        <th data-key="po_number"   data-type="num">PO / Line</th>
+        <th data-key="part"        data-type="text">Part</th>
+        <th data-key="description" data-type="text">Description</th>
+        <th data-key="qty"         data-type="num" class="num-cell">Qty</th>
+        <th data-key="unit_price"  data-type="num" class="num-cell">Unit $</th>
+        <th data-key="value"       data-type="num" class="num-cell">Value</th>
+        <th data-key="due"         data-type="date">Due</th>
+        <th data-key="status"      data-type="text">Status</th>
       </tr></thead>
       <tbody id="cards"></tbody>
     </table></div>
@@ -197,42 +200,109 @@ async function loadData() {
   }
 }
 
-function render(d) {
-  document.getElementById("grand").textContent    = fmt$(d.grand_total);
-  document.getElementById("overdue").textContent  = fmt$(d.overdue_total);
-  document.getElementById("count").textContent    = d.card_count;
-  document.getElementById("missing").textContent  = d.missing_count;
-  document.getElementById("updated").textContent  =
-    "updated " + fmtRelTime(d.generated_at) + " · " + new Date(d.generated_at).toLocaleString();
+// --- sort state ----------------------------------------------------------
+// Per-table active sort. Defaults match what update_dashboard.py emits so
+// initial render is stable even without a click.
+const SORT = {
+  "t-by-list":     { key: null,    dir: "asc",  type: "text" },
+  "t-by-customer": { key: "value", dir: "desc", type: "num"  },
+  "t-cards":       { key: "value", dir: "desc", type: "num"  },
+};
 
-  // By list
-  const byList = document.getElementById("by-list");
-  byList.innerHTML = d.by_list.map(b => `
+let _data = null;
+
+function sortRows(rows, key, dir, type) {
+  if (!key) return rows;
+  const mul = dir === "asc" ? 1 : -1;
+  const cmp = (a, b) => {
+    let av = a[key], bv = b[key];
+    // Nulls sort last regardless of direction.
+    const aN = av === null || av === undefined || av === "";
+    const bN = bv === null || bv === undefined || bv === "";
+    if (aN && bN) return 0;
+    if (aN) return 1;
+    if (bN) return -1;
+    if (type === "num") {
+      return (Number(av) - Number(bv)) * mul;
+    }
+    if (type === "date") {
+      return (new Date(av).getTime() - new Date(bv).getTime()) * mul;
+    }
+    return String(av).toLowerCase().localeCompare(String(bv).toLowerCase()) * mul;
+  };
+  return rows.slice().sort(cmp);
+}
+
+function paintSortIndicator(tableId) {
+  const t = document.getElementById(tableId);
+  if (!t) return;
+  const s = SORT[tableId];
+  t.querySelectorAll("th").forEach(th => {
+    th.classList.remove("sorted-asc", "sorted-desc");
+    if (s.key && th.dataset.key === s.key) {
+      th.classList.add(s.dir === "asc" ? "sorted-asc" : "sorted-desc");
+    }
+  });
+}
+
+function wireHeaderSort(tableId, rerender) {
+  const t = document.getElementById(tableId);
+  if (!t) return;
+  t.querySelectorAll("th").forEach(th => {
+    th.addEventListener("click", () => {
+      const key = th.dataset.key;
+      if (!key) return;
+      const s = SORT[tableId];
+      if (s.key === key) {
+        s.dir = s.dir === "asc" ? "desc" : "asc";
+      } else {
+        s.key = key;
+        s.type = th.dataset.type || "text";
+        // First click on a column: numbers default to desc (largest first),
+        // text/date default to asc (a→z, oldest→newest).
+        s.dir = s.type === "num" ? "desc" : "asc";
+      }
+      rerender();
+    });
+  });
+}
+
+// --- per-table renderers -------------------------------------------------
+function renderByList() {
+  const s = SORT["t-by-list"];
+  const rows = sortRows(_data.by_list, s.key, s.dir, s.type);
+  document.getElementById("by-list").innerHTML = rows.map(b => `
     <tr>
       <td>${escape(b.list_name)}</td>
       <td class="num-cell">${b.card_count}</td>
       <td class="num-cell">${b.missing ? '<span class="overdue">'+b.missing+'</span>' : '0'}</td>
       <td class="num-cell">${fmt$(b.value)}</td>
     </tr>`).join("");
+  paintSortIndicator("t-by-list");
+}
 
-  // By customer
-  const byCustomer = document.getElementById("by-customer");
-  byCustomer.innerHTML = d.by_customer.map(b => `
+function renderByCustomer() {
+  const s = SORT["t-by-customer"];
+  const rows = sortRows(_data.by_customer, s.key, s.dir, s.type);
+  document.getElementById("by-customer").innerHTML = rows.map(b => `
     <tr>
       <td>${escape(b.customer)}</td>
       <td class="num-cell">${b.card_count}</td>
       <td class="num-cell">${b.missing || 0}</td>
       <td class="num-cell">${fmt$(b.value)}</td>
     </tr>`).join("");
+  paintSortIndicator("t-by-customer");
+}
 
-  // Cards
-  const cards = document.getElementById("cards");
-  cards.innerHTML = d.cards.map(r => `
+function renderCards() {
+  const s = SORT["t-cards"];
+  const rows = sortRows(_data.cards, s.key, s.dir, s.type);
+  document.getElementById("cards").innerHTML = rows.map(r => `
     <tr class="row-link${r.overdue ? ' overdue' : ''}">
       <td><a href="${r.url}" target="_blank" rel="noopener">${escape(r.name)}</a></td>
       <td>${escape(r.list_name)}</td>
       <td>${escape(r.customer)}</td>
-      <td>${r.po_number ? `${r.po_number} / ${r.line ?? ''}` : '—'}</td>
+      <td>${r.po_number ? `${r.po_number}${r.line ? ' / ' + r.line : ''}` : '—'}</td>
       <td>${escape(r.part || '')}</td>
       <td>${escape(r.description || '')}</td>
       <td class="num-cell">${r.qty ?? ''}</td>
@@ -241,6 +311,29 @@ function render(d) {
       <td>${fmtDate(r.due)}</td>
       <td>${pill(r.status)}</td>
     </tr>`).join("");
+  paintSortIndicator("t-cards");
+}
+
+function render(d) {
+  _data = d;
+  document.getElementById("grand").textContent    = fmt$(d.grand_total);
+  document.getElementById("overdue").textContent  = fmt$(d.overdue_total);
+  document.getElementById("count").textContent    = d.card_count;
+  document.getElementById("missing").textContent  = d.missing_count;
+  document.getElementById("updated").textContent  =
+    "updated " + fmtRelTime(d.generated_at) + " · " + new Date(d.generated_at).toLocaleString();
+
+  renderByList();
+  renderByCustomer();
+  renderCards();
+
+  // Wire headers once (idempotent because we only register on first render).
+  if (!window._sortWired) {
+    wireHeaderSort("t-by-list",     renderByList);
+    wireHeaderSort("t-by-customer", renderByCustomer);
+    wireHeaderSort("t-cards",       renderCards);
+    window._sortWired = true;
+  }
 
   document.getElementById("footer").textContent =
     `${d.card_count} active cards · board ${d.board_id}`;
