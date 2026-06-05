@@ -33,7 +33,7 @@ PART_LINE_RE = re.compile(
     r"^(?P<part>[\w\-]+)\s*/\s*(?P<rev>[\w\-]+)\s*/\s*(?P<desc>.+?)\s*$"
 )
 PRICE_PER_RE = re.compile(r"^(?P<unit>\d+\.\d{2})\s*/\s*\d+\s*$")
-NUMBER_RE = re.compile(r"^(?P<n>\d+(?:\.\d+)?)\s*$")
+NUMBER_RE = re.compile(r"^(?P<n>[\d,]+(?:\.\d+)?)\s*$")
 PONUM_RE = re.compile(r"PO Number:\s*\n\s*(\d+)", re.MULTILINE)
 
 # Column-header rows that mark the start of each line-item block.
@@ -128,9 +128,9 @@ def parse_po_text(full_text: str) -> dict:
                         part_digits=normalize_part(raw_part),
                         rev=part_m.group("rev"),
                         description=part_m.group("desc"),
-                        qty=float(qty_m.group("n")),
-                        unit_price=float(unit_m.group("unit")),
-                        ext_price=float(ext_m.group("n")),
+                        qty=float(qty_m.group("n").replace(",", "")),
+                        unit_price=float(unit_m.group("unit").replace(",", "")),
+                        ext_price=float(ext_m.group("n").replace(",", "")),
                         uom=uom,
                     )
                 )

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  launchd job that runs update_dashboard.py every 15 minutes while you're
+  logged in. setup_dashboard.command renders the real plist from this
+  template (filling in the repo path) and loads it.
+
+  Logs are in this folder (`out.log` / `err.log`); both git-ignored.
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.btmfg.dashboard</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/benthomas/Documents/Claude/btmfg-capacity-new/.venv/bin/python</string>
+    <string>/Users/benthomas/Documents/Claude/btmfg-capacity-new/update_dashboard.py</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/benthomas/Documents/Claude/btmfg-capacity-new</string>
+
+  <key>StartInterval</key>
+  <integer>900</integer>  <!-- 15 minutes -->
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/Users/benthomas/Documents/Claude/btmfg-capacity-new/launchd/out.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/benthomas/Documents/Claude/btmfg-capacity-new/launchd/err.log</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+</dict>
+</plist>

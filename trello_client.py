@@ -28,9 +28,11 @@ class TrelloClient:
         return resp.json()
 
     def lists(self, board_id: str) -> list[dict]:
+        # fetch ALL lists (including closed/hidden) so we can resolve names for
+        # any card, then let the caller decide what to exclude by list name.
         return self._get(
             f"/boards/{board_id}/lists",
-            filter="open",
+            filter="all",
             fields="name,pos,closed",
         )
 

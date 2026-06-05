@@ -52,8 +52,9 @@ EXCLUDE_LISTS = {
 PART_FIELD_HINTS = ["part", "part number", "part #"]
 
 # Card-name pattern set by intake_po.py: "SUN PO 351934 Line 2"
+# Line N is optional — some cards are named "SUN PO 351934" without a line.
 CARD_NAME_RE = re.compile(
-    r"\bSUN\s+PO\s+(?P<po>\d{5,7})\s+Line\s+(?P<line>\d+)\b",
+    r"\bSUN\s+PO\s+(?P<po>\d{5,7})(?:\s+Line\s+(?P<line>\d+))?\b",
     re.IGNORECASE,
 )
 
@@ -148,7 +149,7 @@ def build_dashboard() -> dict:
         name = card.get("name") or ""
         m = CARD_NAME_RE.search(name)
         po_num = m.group("po") if m else None
-        line_n = int(m.group("line")) if m else None
+        line_n = int(m.group("line")) if m and m.group("line") else None
         part_digits = card_part_digits(card, part_field_id)
 
         row = {
@@ -186,6 +187,11 @@ def build_dashboard() -> dict:
                         if it["part_digits"] == part_digits:
                             item = it
                             break
+                # Fallback: if PDF has exactly one item and we still haven't
+                # matched (line number mismatch or no line in card name), use
+                # that single item — Sun sends BT MFG only relevant lines.
+                if item is None and len(parsed["items"]) == 1:
+                    item = parsed["items"][0]
                 if item is None:
                     row["status"] = "line_not_found_in_po"
                 else:
