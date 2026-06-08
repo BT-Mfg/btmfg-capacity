@@ -157,13 +157,11 @@
 <div class="loading" id="loading">Loading dashboard…</div>
 <div class="error" id="error" hidden></div>
 
-<script src="auth.js?_=1780936400"></script>
 <script>
 // --- password gate -------------------------------------------------------
-// PW_HASH is defined in auth.js, which update_dashboard.py writes from
-// DASHBOARD_PASSWORD in .env. If auth.js is missing or PW_HASH is empty,
-// the gate is bypassed and the dashboard is fully public.
-const PW_HASH = (window.PW_HASH || "").trim();
+// PW_HASH is written inline by update_dashboard.py from DASHBOARD_PASSWORD
+// in .env. Empty string = public (no gate).
+const PW_HASH = "";
 const PW_KEY  = "btmfg-dashboard-auth-v1";
 
 async function sha256(s) {
