@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-06-16T16:15:52.640655+00:00",
+  "generated_at": "2026-06-16T17:15:34.197208+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 67487.5,
+  "grand_total": 68581.5,
   "overdue_total": 620.0,
   "missing_count": 8,
-  "card_count": 97,
+  "card_count": 100,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -30,8 +30,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ecc",
       "list_name": "Job Received",
-      "card_count": 10,
-      "value": 6383.3,
+      "card_count": 12,
+      "value": 7323.3,
       "missing": 0
     },
     {
@@ -86,8 +86,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 11,
-      "value": 6759.2,
+      "card_count": 10,
+      "value": 6464.2,
       "missing": 0
     },
     {
@@ -100,16 +100,16 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 15,
-      "value": 11360.0,
+      "card_count": 17,
+      "value": 11809.0,
       "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 91,
-      "value": 67487.5,
+      "card_count": 94,
+      "value": 68581.5,
       "missing": 2
     },
     {
@@ -805,6 +805,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6a3183f4abd46d6935d1a055",
+      "name": "SUN PO 386541 Line 2",
+      "url": "https://trello.com/c/98kD6Hwu/2019-sun-po-386541-line-2",
+      "list_id": "62e926e0ad2344544b0e7ecc",
+      "list_name": "Job Received",
+      "customer": "Sun Automation",
+      "po_number": "386541",
+      "line": 2,
+      "part": "69773",
+      "due": "2026-10-02T18:50:00.000Z",
+      "overdue": false,
+      "value": 570.0,
+      "qty": 2.0,
+      "unit_price": 285.0,
+      "description": "RETAINER OS LOWER FEED RO",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "698dcf558a809da661ac8402",
       "name": "SUN PO 382836",
       "url": "https://trello.com/c/DkqXL8Wr/1797-sun-po-382836",
@@ -953,6 +972,25 @@
       "qty": 1.0,
       "unit_price": 375.0,
       "description": "SHAFT ROCKER EXTENSION 45MM x 22IN POForm:001:00 SUN AUTOMATION INC 12201 Long Green Pike Glen Arm MD 21057 UNITED STATES Phone: Fax: 410 472 2900 410-472-2907 PO Number: 385902 Purchase Order Page: 3 of 6 Revised: 5/29/2026",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6a3183f57b09f6fb3c2bf7c5",
+      "name": "SUN PO 386541 Line 3",
+      "url": "https://trello.com/c/2VMcgmL9/2020-sun-po-386541-line-3",
+      "list_id": "62e926e0ad2344544b0e7ecc",
+      "list_name": "Job Received",
+      "customer": "Sun Automation",
+      "po_number": "386541",
+      "line": 3,
+      "part": "69777",
+      "due": "2026-10-02T18:50:00.000Z",
+      "overdue": false,
+      "value": 370.0,
+      "qty": 2.0,
+      "unit_price": 185.0,
+      "description": "RETAINER DS BEARING RDC",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1207,8 +1245,8 @@
       "card_id": "69e25349705ce5c15e12bcf7",
       "name": "SUN PO 384802 Line 4",
       "url": "https://trello.com/c/kjj1VY5i/1872-sun-po-384802-line-4",
-      "list_id": "62e926e0ad2344544b0e7ed5",
-      "list_name": "VM2 (Doosan DNM4500)",
+      "list_id": "63f62315f46e7c220859abe3",
+      "list_name": "Inspection",
       "customer": "Sun Automation",
       "po_number": "384802",
       "line": 4,
@@ -1618,6 +1656,25 @@
       "qty": 1.0,
       "unit_price": 165.0,
       "description": "(PNTM) BLOCK BEARING ELEVATING CHANNEL",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6a3183f3dd100b558c240853",
+      "name": "SUN PO 386541 Line 1",
+      "url": "https://trello.com/c/iPl0BjoA/2018-sun-po-386541-line-1",
+      "list_id": "63f62315f46e7c220859abe3",
+      "list_name": "Inspection",
+      "customer": "Sun Automation",
+      "po_number": "386541",
+      "line": 1,
+      "part": "114043",
+      "due": "2026-06-19T18:50:00.000Z",
+      "overdue": false,
+      "value": 154.0,
+      "qty": 4.0,
+      "unit_price": 38.5,
+      "description": "RETAINER STOP STUD",
       "status": "ok",
       "source": "gmail-or-folder"
     },
