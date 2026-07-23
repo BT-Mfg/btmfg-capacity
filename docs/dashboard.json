@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-22T20:39:42.029587+00:00",
+  "generated_at": "2026-07-23T12:21:54.768109+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 62993.5,
+  "grand_total": 64363.5,
   "overdue_total": 9480.0,
   "missing_count": 6,
-  "card_count": 95,
+  "card_count": 97,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -28,6 +28,13 @@
       "missing": 1
     },
     {
+      "list_id": "62e926e0ad2344544b0e7ecc",
+      "list_name": "Job Received",
+      "card_count": 2,
+      "value": 1370.0,
+      "missing": 0
+    },
+    {
       "list_id": "62e926e0ad2344544b0e7ecd",
       "list_name": "PaperWork Made",
       "card_count": 32,
@@ -44,8 +51,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed1",
       "list_name": "Ready for Machining",
-      "card_count": 4,
-      "value": 1170.0,
+      "card_count": 5,
+      "value": 1295.0,
       "missing": 0
     },
     {
@@ -100,16 +107,16 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 20,
-      "value": 13535.0,
+      "card_count": 19,
+      "value": 13410.0,
       "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 89,
-      "value": 62993.5,
+      "card_count": 91,
+      "value": 64363.5,
       "missing": 0
     },
     {
@@ -269,6 +276,25 @@
       "qty": 4.0,
       "unit_price": 300.0,
       "description": "UNIVERSAL JOINT .50 ID / 1.00 ID MODIFIED",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6a612aa08cec104d145de93d",
+      "name": "SUN PO 387539 Line 1",
+      "url": "https://trello.com/c/WN61IzK8/2076-sun-po-387539-line-1",
+      "list_id": "62e926e0ad2344544b0e7ecc",
+      "list_name": "Job Received",
+      "customer": "Sun Automation",
+      "po_number": "387539",
+      "line": 1,
+      "part": "12238300",
+      "due": "2026-08-18T18:50:00.000Z",
+      "overdue": false,
+      "value": 1200.0,
+      "qty": 1.0,
+      "unit_price": 1200.0,
+      "description": "(PNT) BLOWER MOUNT FEEDER SRDC",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1508,6 +1534,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6a612aa1e6c73e7fcfc85e91",
+      "name": "SUN PO 387539 Line 2",
+      "url": "https://trello.com/c/bR47bfHZ/2077-sun-po-387539-line-2",
+      "list_id": "62e926e0ad2344544b0e7ecc",
+      "list_name": "Job Received",
+      "customer": "Sun Automation",
+      "po_number": "387539",
+      "line": 2,
+      "part": "150581",
+      "due": "2026-09-02T18:50:00.000Z",
+      "overdue": false,
+      "value": 170.0,
+      "qty": 2.0,
+      "unit_price": 85.0,
+      "description": "PIN",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6a3abbc07ff29df0f3096de0",
       "name": "SUN PO 386770 Line 2",
       "url": "https://trello.com/c/kdbt3N4j/2029-sun-po-386770-line-2",
@@ -1549,8 +1594,8 @@
       "card_id": "6a561efce94e106f2c7cb47f",
       "name": "SUN PO 387241 Line 2",
       "url": "https://trello.com/c/Hy8S8i1L/2047-sun-po-387241-line-2",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
+      "list_id": "62e926e0ad2344544b0e7ed1",
+      "list_name": "Ready for Machining",
       "customer": "Sun Automation",
       "po_number": "387241",
       "line": 2,
