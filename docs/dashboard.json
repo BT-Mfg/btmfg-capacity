@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-08T18:05:34.580611+00:00",
+  "generated_at": "2026-09-08T19:12:54.017030+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 116427.8,
-  "overdue_total": 3870.0,
+  "overdue_total": 4180.0,
   "missing_count": 17,
   "card_count": 131,
   "by_list": [
@@ -44,8 +44,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ecf",
       "list_name": "Material and Tooling Ordered/",
-      "card_count": 6,
-      "value": 20710.0,
+      "card_count": 4,
+      "value": 19950.0,
       "missing": 0
     },
     {
@@ -86,8 +86,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed4",
       "list_name": "VM1 (Amera-Seki) OFFLINE",
-      "card_count": 2,
-      "value": 1190.0,
+      "card_count": 3,
+      "value": 1180.0,
       "missing": 0
     },
     {
@@ -107,8 +107,8 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 11,
-      "value": 4335.0,
+      "card_count": 12,
+      "value": 5105.0,
       "missing": 0
     }
   ],
@@ -1024,8 +1024,8 @@
       "card_id": "6a74b91942ff5d6168107a6d",
       "name": "SUN PO 387940 Line 1",
       "url": "https://trello.com/c/Nr2YxgeI/2092-sun-po-387940-line-1",
-      "list_id": "62e926e0ad2344544b0e7ed4",
-      "list_name": "VM1 (Amera-Seki) OFFLINE",
+      "list_id": "63f62315f46e7c220859abe3",
+      "list_name": "Inspection",
       "customer": "Sun Automation",
       "po_number": "387940",
       "line": 1,
@@ -1423,8 +1423,8 @@
       "card_id": "6a8ae8acf584ed26989f091e",
       "name": "SUN PO 388275 Line 1",
       "url": "https://trello.com/c/KXb50ecR/2114-sun-po-388275-line-1",
-      "list_id": "62e926e0ad2344544b0e7ecf",
-      "list_name": "Material and Tooling Ordered/",
+      "list_id": "62e926e0ad2344544b0e7ed4",
+      "list_name": "VM1 (Amera-Seki) OFFLINE",
       "customer": "Sun Automation",
       "po_number": "388275",
       "line": 1,
@@ -1708,8 +1708,8 @@
       "card_id": "6a8ae8ad2bd972a578fe0991",
       "name": "SUN PO 388275 Line 2",
       "url": "https://trello.com/c/iEOob9Xw/2115-sun-po-388275-line-2",
-      "list_id": "62e926e0ad2344544b0e7ecf",
-      "list_name": "Material and Tooling Ordered/",
+      "list_id": "62e926e0ad2344544b0e7ed4",
+      "list_name": "VM1 (Amera-Seki) OFFLINE",
       "customer": "Sun Automation",
       "po_number": "388275",
       "line": 2,
@@ -1962,7 +1962,7 @@
       "line": 2,
       "part": "11612500",
       "due": "2026-09-08T18:50:00.000Z",
-      "overdue": false,
+      "overdue": true,
       "value": 185.0,
       "qty": 1.0,
       "unit_price": 185.0,
@@ -2152,7 +2152,7 @@
       "line": 2,
       "part": "808183",
       "due": "2026-09-08T18:50:00.000Z",
-      "overdue": false,
+      "overdue": true,
       "value": 125.0,
       "qty": 1.0,
       "unit_price": 125.0,
