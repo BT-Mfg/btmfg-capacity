@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-30T19:24:53.869866+00:00",
+  "generated_at": "2026-10-31T17:04:31.082860+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 78442.14,
-  "overdue_total": 7135.0,
+  "grand_total": 77342.14,
+  "overdue_total": 6035.0,
   "missing_count": 7,
-  "card_count": 92,
+  "card_count": 90,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -93,15 +93,15 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed4",
       "list_name": "VM1 (Amera-Seki) OFFLINE",
-      "card_count": 2,
-      "value": 4575.0,
+      "card_count": 1,
+      "value": 3375.0,
       "missing": 0
     },
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 3,
-      "value": 2450.0,
+      "card_count": 2,
+      "value": 2100.0,
       "missing": 0
     },
     {
@@ -114,16 +114,23 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 6,
-      "value": 2475.0,
+      "card_count": 5,
+      "value": 1725.0,
+      "missing": 0
+    },
+    {
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "card_count": 1,
+      "value": 1200.0,
       "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 85,
-      "value": 78442.14,
+      "card_count": 83,
+      "value": 77342.14,
       "missing": 0
     },
     {
@@ -537,8 +544,8 @@
       "card_id": "6a9af1782505103f5aba69f9",
       "name": "SUN PO 388533 Line 49",
       "url": "https://trello.com/c/Lu1AqH3l/2186-sun-po-388533-line-49",
-      "list_id": "62e926e0ad2344544b0e7ed4",
-      "list_name": "VM1 (Amera-Seki) OFFLINE",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
       "customer": "Sun Automation",
       "po_number": "388533",
       "line": 49,
@@ -758,25 +765,6 @@
       "qty": 10.0,
       "unit_price": 75.0,
       "description": "POWER CLAMP REWORK",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6ad8c9ba36a46c05029e2081",
-      "name": "SUN PO 389756 Line 1",
-      "url": "https://trello.com/c/7BcH6gbp/2251-sun-po-389756-line-1",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Sun Automation",
-      "po_number": "389756",
-      "line": 1,
-      "part": "55019",
-      "due": "2026-10-30T18:50:00.000Z",
-      "overdue": true,
-      "value": 750.0,
-      "qty": 2.0,
-      "unit_price": 375.0,
-      "description": "HOLDER BLADE 28 5/8 LG",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1214,25 +1202,6 @@
       "qty": 2.0,
       "unit_price": 185.0,
       "description": "SHAFT LINEAR BEARING PRINT CYL SRDC",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "698dd63337e56a9a9c2a7797",
-      "name": "SUN PO 383099 Line 2",
-      "url": "https://trello.com/c/4fQ6j2Bz/1805-sun-po-383099-line-2",
-      "list_id": "62e926e0ad2344544b0e7ed5",
-      "list_name": "VM2 (Doosan DNM4500)",
-      "customer": "Sun Automation",
-      "po_number": "383099",
-      "line": 2,
-      "part": "10641900",
-      "due": "2026-10-27T11:42:00.000Z",
-      "overdue": true,
-      "value": 350.0,
-      "qty": 2.0,
-      "unit_price": 175.0,
-      "description": "(C7) BLOCK BEARING FEED GATE RDC",
       "status": "ok",
       "source": "gmail-or-folder"
     },
