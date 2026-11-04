@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-10-31T17:04:31.082860+00:00",
+  "generated_at": "2026-11-04T16:06:40.420184+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 77342.14,
-  "overdue_total": 6035.0,
+  "grand_total": 76292.14,
+  "overdue_total": 4835.0,
   "missing_count": 7,
   "card_count": 90,
   "by_list": [
@@ -86,8 +86,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed3",
       "list_name": "TC1 (Haas TL-1)",
-      "card_count": 3,
-      "value": 2425.0,
+      "card_count": 2,
+      "value": 1700.0,
       "missing": 0
     },
     {
@@ -121,8 +121,8 @@
     {
       "list_id": "6ae24b4c645042e7a0bfa059",
       "list_name": "Invoice Now",
-      "card_count": 1,
-      "value": 1200.0,
+      "card_count": 2,
+      "value": 875.0,
       "missing": 0
     }
   ],
@@ -130,7 +130,7 @@
     {
       "customer": "Sun Automation",
       "card_count": 83,
-      "value": 77342.14,
+      "value": 76292.14,
       "missing": 0
     },
     {
@@ -541,25 +541,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6a9af1782505103f5aba69f9",
-      "name": "SUN PO 388533 Line 49",
-      "url": "https://trello.com/c/Lu1AqH3l/2186-sun-po-388533-line-49",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "388533",
-      "line": 49,
-      "part": "12254200",
-      "due": "2026-10-16T18:50:00.000Z",
-      "overdue": true,
-      "value": 1200.0,
-      "qty": 10.0,
-      "unit_price": 120.0,
-      "description": "BRACKET ANTI ROTATION SRDC",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6a8ecd194e49d2d054f5a099",
       "name": "SUN PO 388320 Line 6",
       "url": "https://trello.com/c/cvI47Bnh/2124-sun-po-388320-line-6",
@@ -772,8 +753,8 @@
       "card_id": "6ab14945954a59560c29e205",
       "name": "SUN PO 389006 Line 1",
       "url": "https://trello.com/c/5krs7uI2/2197-sun-po-389006-line-1",
-      "list_id": "62e926e0ad2344544b0e7ed3",
-      "list_name": "TC1 (Haas TL-1)",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
       "customer": "Sun Automation",
       "po_number": "389006",
       "line": 1,
@@ -1601,6 +1582,25 @@
       "qty": 1.0,
       "unit_price": 165.0,
       "description": "END CAP - LCR",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6a8ecd2da951cd8ad7b27aba",
+      "name": "SUN PO 388320 Line 24",
+      "url": "https://trello.com/c/eVeGGXXi/2142-sun-po-388320-line-24",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "customer": "Sun Automation",
+      "po_number": "388320",
+      "line": 24,
+      "part": "HYCA276F1",
+      "due": "2027-02-01T19:50:00.000Z",
+      "overdue": false,
+      "value": 150.0,
+      "qty": 1.0,
+      "unit_price": 150.0,
+      "description": "55015964-LATERAL ADJUST BEARING MODIFIED",
       "status": "ok",
       "source": "gmail-or-folder"
     },
