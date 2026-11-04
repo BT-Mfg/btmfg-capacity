@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-04T16:06:40.420184+00:00",
+  "generated_at": "2026-11-04T16:09:07.349735+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 76292.14,
-  "overdue_total": 4835.0,
+  "grand_total": 75417.14,
+  "overdue_total": 4110.0,
   "missing_count": 7,
-  "card_count": 90,
+  "card_count": 88,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -58,8 +58,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed1",
       "list_name": "Ready for Machining",
-      "card_count": 11,
-      "value": 10106.14,
+      "card_count": 10,
+      "value": 6206.14,
       "missing": 0
     },
     {
@@ -121,16 +121,16 @@
     {
       "list_id": "6ae24b4c645042e7a0bfa059",
       "list_name": "Invoice Now",
-      "card_count": 2,
-      "value": 875.0,
+      "card_count": 1,
+      "value": 3900.0,
       "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 83,
-      "value": 76292.14,
+      "card_count": 81,
+      "value": 75417.14,
       "missing": 0
     },
     {
@@ -145,8 +145,8 @@
       "card_id": "6a8ecd2a676c47f91075c485",
       "name": "SUN PO 388320 Line 21",
       "url": "https://trello.com/c/pMFgC7T9/2139-sun-po-388320-line-21",
-      "list_id": "62e926e0ad2344544b0e7ed1",
-      "list_name": "Ready for Machining",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
       "customer": "Sun Automation",
       "po_number": "388320",
       "line": 21,
@@ -746,25 +746,6 @@
       "qty": 10.0,
       "unit_price": 75.0,
       "description": "POWER CLAMP REWORK",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6ab14945954a59560c29e205",
-      "name": "SUN PO 389006 Line 1",
-      "url": "https://trello.com/c/5krs7uI2/2197-sun-po-389006-line-1",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "389006",
-      "line": 1,
-      "part": "10991600",
-      "due": "2026-10-30T18:50:00.000Z",
-      "overdue": true,
-      "value": 725.0,
-      "qty": 1.0,
-      "unit_price": 725.0,
-      "description": "STUD SENSOR EYE",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1582,25 +1563,6 @@
       "qty": 1.0,
       "unit_price": 165.0,
       "description": "END CAP - LCR",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6a8ecd2da951cd8ad7b27aba",
-      "name": "SUN PO 388320 Line 24",
-      "url": "https://trello.com/c/eVeGGXXi/2142-sun-po-388320-line-24",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "388320",
-      "line": 24,
-      "part": "HYCA276F1",
-      "due": "2027-02-01T19:50:00.000Z",
-      "overdue": false,
-      "value": 150.0,
-      "qty": 1.0,
-      "unit_price": 150.0,
-      "description": "55015964-LATERAL ADJUST BEARING MODIFIED",
       "status": "ok",
       "source": "gmail-or-folder"
     },
