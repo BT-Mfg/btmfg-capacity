@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-13T17:56:03.782957+00:00",
+  "generated_at": "2026-11-13T20:08:59.643874+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 101903.27,
-  "overdue_total": 2150.0,
+  "grand_total": 97748.27,
+  "overdue_total": 3900.0,
   "missing_count": 8,
-  "card_count": 126,
+  "card_count": 124,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -100,8 +100,8 @@
     {
       "list_id": "643d227b2e31a2d2952a4a97",
       "list_name": "Okuma M560",
-      "card_count": 4,
-      "value": 3210.0,
+      "card_count": 3,
+      "value": 2795.0,
       "missing": 0
     },
     {
@@ -114,23 +114,23 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 8,
-      "value": 6440.0,
+      "card_count": 7,
+      "value": 2540.0,
       "missing": 0
     },
     {
       "list_id": "6ae24b4c645042e7a0bfa059",
       "list_name": "Invoice Now",
       "card_count": 1,
-      "value": 255.0,
+      "value": 415.0,
       "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 119,
-      "value": 101903.27,
+      "card_count": 117,
+      "value": 97748.27,
       "missing": 1
     },
     {
@@ -157,25 +157,6 @@
       "qty": 60.0,
       "unit_price": 110.0,
       "description": "LEVER ROCKER DRIVE METRIC",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6a8ecd2a676c47f91075c485",
-      "name": "SUN PO 388320 Line 21",
-      "url": "https://trello.com/c/pMFgC7T9/2139-sun-po-388320-line-21",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Sun Automation",
-      "po_number": "388320",
-      "line": 21,
-      "part": "12059400",
-      "due": "2026-11-16T18:50:00.000Z",
-      "overdue": false,
-      "value": 3900.0,
-      "qty": 20.0,
-      "unit_price": 195.0,
-      "description": "(C7) BLOCK CLEVIS LATCH GRILLE VT SRDC",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -646,7 +627,7 @@
       "line": 4,
       "part": "JP000328",
       "due": "2026-11-13T18:50:00.000Z",
-      "overdue": false,
+      "overdue": true,
       "value": 1200.0,
       "qty": 1.0,
       "unit_price": 1200.0,
@@ -1197,7 +1178,7 @@
       "line": 1,
       "part": "105688",
       "due": "2026-11-13T18:50:00.000Z",
-      "overdue": false,
+      "overdue": true,
       "value": 550.0,
       "qty": 2.0,
       "unit_price": 275.0,
@@ -1532,8 +1513,8 @@
       "card_id": "6af1ce2188f13811126f6f1b",
       "name": "SUN PO 390021 Line 2",
       "url": "https://trello.com/c/sE5zV1lq/2265-sun-po-390021-line-2",
-      "list_id": "643d227b2e31a2d2952a4a97",
-      "list_name": "Okuma M560",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
       "customer": "Sun Automation",
       "po_number": "390021",
       "line": 2,
@@ -1886,25 +1867,6 @@
       "qty": 1.0,
       "unit_price": 255.0,
       "description": "SPACER LOWER DRUM DS",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6af1ce1eca1484ddf1ac457f",
-      "name": "SUN PO 390021 Line 1",
-      "url": "https://trello.com/c/lJ192e6T/2264-sun-po-390021-line-1",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "390021",
-      "line": 1,
-      "part": "10526100",
-      "due": "2026-12-03T18:50:00.000Z",
-      "overdue": false,
-      "value": 255.0,
-      "qty": 1.0,
-      "unit_price": 255.0,
-      "description": "(C7) BLOCK STOP",
       "status": "ok",
       "source": "gmail-or-folder"
     },
