@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T13:14:42.117364+00:00",
+  "generated_at": "2026-11-13T17:56:03.782957+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 101903.27,
   "overdue_total": 2150.0,
@@ -107,15 +107,22 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed7",
       "list_name": "At Post Process",
-      "card_count": 3,
-      "value": 5655.0,
+      "card_count": 1,
+      "value": 1500.0,
       "missing": 0
     },
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 7,
-      "value": 2540.0,
+      "card_count": 8,
+      "value": 6440.0,
+      "missing": 0
+    },
+    {
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "card_count": 1,
+      "value": 255.0,
       "missing": 0
     }
   ],
@@ -157,8 +164,8 @@
       "card_id": "6a8ecd2a676c47f91075c485",
       "name": "SUN PO 388320 Line 21",
       "url": "https://trello.com/c/pMFgC7T9/2139-sun-po-388320-line-21",
-      "list_id": "62e926e0ad2344544b0e7ed7",
-      "list_name": "At Post Process",
+      "list_id": "63f62315f46e7c220859abe3",
+      "list_name": "Inspection",
       "customer": "Sun Automation",
       "po_number": "388320",
       "line": 21,
@@ -1436,7 +1443,7 @@
       "po_number": "389104",
       "line": 2,
       "part": "803913",
-      "due": "2026-11-13T18:50:00.000Z",
+      "due": "2026-11-16T18:50:00.000Z",
       "overdue": false,
       "value": 450.0,
       "qty": 1.0,
@@ -1886,8 +1893,8 @@
       "card_id": "6af1ce1eca1484ddf1ac457f",
       "name": "SUN PO 390021 Line 1",
       "url": "https://trello.com/c/lJ192e6T/2264-sun-po-390021-line-1",
-      "list_id": "62e926e0ad2344544b0e7ed7",
-      "list_name": "At Post Process",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
       "customer": "Sun Automation",
       "po_number": "390021",
       "line": 1,
@@ -2196,7 +2203,7 @@
       "po_number": "389403",
       "line": 1,
       "part": "108167",
-      "due": "2026-11-27T18:50:00.000Z",
+      "due": "2026-11-25T18:50:00.000Z",
       "overdue": false,
       "value": 165.0,
       "qty": 1.0,
