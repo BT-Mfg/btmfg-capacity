@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-16T15:56:02.105300+00:00",
+  "generated_at": "2026-11-16T20:35:46.102930+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 97738.27,
-  "overdue_total": 3980.0,
+  "grand_total": 98483.27,
+  "overdue_total": 4756.0,
   "missing_count": 8,
-  "card_count": 124,
+  "card_count": 125,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -93,8 +93,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed3",
       "list_name": "TC1 (Haas TL-1)",
-      "card_count": 3,
-      "value": 3100.0,
+      "card_count": 2,
+      "value": 2450.0,
       "missing": 0
     },
     {
@@ -107,15 +107,15 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 5,
-      "value": 1810.0,
+      "card_count": 6,
+      "value": 2460.0,
       "missing": 0
     },
     {
       "list_id": "643d227b2e31a2d2952a4a97",
       "list_name": "Okuma M560",
-      "card_count": 3,
-      "value": 2795.0,
+      "card_count": 4,
+      "value": 3210.0,
       "missing": 0
     },
     {
@@ -136,7 +136,7 @@
       "list_id": "6ae24b4c645042e7a0bfa059",
       "list_name": "Invoice Now",
       "card_count": 1,
-      "value": 170.0,
+      "value": 500.0,
       "missing": 0
     },
     {
@@ -150,8 +150,8 @@
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 117,
-      "value": 97738.27,
+      "card_count": 118,
+      "value": 98483.27,
       "missing": 1
     },
     {
@@ -1037,6 +1037,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6acf976f46bf83e6f3dda93a",
+      "name": "SUN PO 389581 Line 5",
+      "url": "https://trello.com/c/gvMPsaNC/2234-sun-po-389581-line-5",
+      "list_id": "62e926e0ad2344544b0e7ed5",
+      "list_name": "VM2 (Doosan DNM4500)",
+      "customer": "Sun Automation",
+      "po_number": "389581",
+      "line": 5,
+      "part": "STA013475",
+      "due": "2026-11-09T18:50:00.000Z",
+      "overdue": true,
+      "value": 650.0,
+      "qty": 1.0,
+      "unit_price": 650.0,
+      "description": "STUB DRIVE ANILOX ROLL",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6ad65e5f76afa64167e060f9",
       "name": "SUN PO 389682 Line 7",
       "url": "https://trello.com/c/hZqRX22u/2245-sun-po-389682-line-7",
@@ -1071,25 +1090,6 @@
       "qty": 2.0,
       "unit_price": 325.0,
       "description": "CLAMP GF KNIFE (H)",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6acf976f46bf83e6f3dda93a",
-      "name": "SUN PO 389581 Line 5",
-      "url": "https://trello.com/c/gvMPsaNC/2234-sun-po-389581-line-5",
-      "list_id": "62e926e0ad2344544b0e7ed3",
-      "list_name": "TC1 (Haas TL-1)",
-      "customer": "Sun Automation",
-      "po_number": "389581",
-      "line": 5,
-      "part": "STA013475",
-      "due": "2026-11-09T18:50:00.000Z",
-      "overdue": true,
-      "value": 650.0,
-      "qty": 1.0,
-      "unit_price": 650.0,
-      "description": "STUB DRIVE ANILOX ROLL",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1341,6 +1341,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6af1cf01ce2276b7bc1fc58f",
+      "name": "SUN PO 390108 Line 3",
+      "url": "https://trello.com/c/EwbHXZwC/2280-sun-po-390108-line-3",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "customer": "Sun Automation",
+      "po_number": "390108",
+      "line": 3,
+      "part": "416658",
+      "due": "2026-12-15T18:50:00.000Z",
+      "overdue": false,
+      "value": 500.0,
+      "qty": 4.0,
+      "unit_price": 125.0,
+      "description": "POST AIR MOTOR",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6af1cfd4b8220d536a8c8504",
       "name": "SUN PO 390250 Line 10",
       "url": "https://trello.com/c/bEWJtO8s/2295-sun-po-390250-line-10",
@@ -1446,7 +1465,7 @@
       "line": 2,
       "part": "803913",
       "due": "2026-11-16T18:50:00.000Z",
-      "overdue": false,
+      "overdue": true,
       "value": 450.0,
       "qty": 1.0,
       "unit_price": 450.0,
@@ -1527,6 +1546,25 @@
       "qty": 6.0,
       "unit_price": 70.0,
       "description": "ARM ROCKER METRIC",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6af1ce2188f13811126f6f1b",
+      "name": "SUN PO 390021 Line 2",
+      "url": "https://trello.com/c/sE5zV1lq/2265-sun-po-390021-line-2",
+      "list_id": "643d227b2e31a2d2952a4a97",
+      "list_name": "Okuma M560",
+      "customer": "Sun Automation",
+      "po_number": "390021",
+      "line": 2,
+      "part": "19124",
+      "due": "2026-11-23T18:50:00.000Z",
+      "overdue": false,
+      "value": 415.0,
+      "qty": 1.0,
+      "unit_price": 415.0,
+      "description": "COVER PINION",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1636,7 +1674,7 @@
       "line": 3,
       "part": "15763",
       "due": "2026-11-16T18:50:00.000Z",
-      "overdue": false,
+      "overdue": true,
       "value": 326.0,
       "qty": 1.0,
       "unit_price": 326.0,
@@ -2097,25 +2135,6 @@
       "qty": 2.0,
       "unit_price": 85.0,
       "description": "PLATE MOUNTING LIMIT SWITCHES END ADJUST SRDC",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6af1ce22f584bd228f913de7",
-      "name": "SUN PO 390021 Line 3",
-      "url": "https://trello.com/c/ARoEBOq8/2266-sun-po-390021-line-3",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "390021",
-      "line": 3,
-      "part": "413440",
-      "due": "2026-11-23T18:50:00.000Z",
-      "overdue": false,
-      "value": 170.0,
-      "qty": 2.0,
-      "unit_price": 85.0,
-      "description": "KEY PULLEY GS",
       "status": "ok",
       "source": "gmail-or-folder"
     },
