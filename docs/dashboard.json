@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-19T21:11:48.403279+00:00",
+  "generated_at": "2026-11-19T21:14:26.705310+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 116429.87,
+  "grand_total": 116579.87,
   "overdue_total": 5561.0,
   "missing_count": 8,
   "card_count": 141,
@@ -38,7 +38,7 @@
       "list_id": "62e926e0ad2344544b0e7ecd",
       "list_name": "PaperWork Made",
       "card_count": 58,
-      "value": 45090.0,
+      "value": 45240.0,
       "missing": 0
     },
     {
@@ -137,7 +137,7 @@
     {
       "customer": "Sun Automation",
       "card_count": 134,
-      "value": 116429.87,
+      "value": 116579.87,
       "missing": 1
     },
     {
@@ -1004,6 +1004,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6a2c1817d80be3e41a142aaf",
+      "name": "SUN PO 386394 Line 2",
+      "url": "https://trello.com/c/f6hfEYWx/1998-sun-po-386394-line-2",
+      "list_id": "62e926e0ad2344544b0e7ecd",
+      "list_name": "PaperWork Made",
+      "customer": "Sun Automation",
+      "po_number": "386394",
+      "line": 2,
+      "part": "73468",
+      "due": "2027-01-22T18:50:00.000Z",
+      "overdue": false,
+      "value": 850.0,
+      "qty": 4.0,
+      "unit_price": 212.5,
+      "description": "(C7) PLATE OS CAPTURE",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6ac51ed30d85b46866bb5ca2",
       "name": "SUN PO 389403 Line 2",
       "url": "https://trello.com/c/gJEStXf3/2222-sun-po-389403-line-2",
@@ -1171,25 +1190,6 @@
       "qty": 20.0,
       "unit_price": 35.0,
       "description": "(C7) CLIP SPRING TENSIONER",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6a2c1817d80be3e41a142aaf",
-      "name": "SUN PO 386394 Line 2",
-      "url": "https://trello.com/c/f6hfEYWx/1998-sun-po-386394-line-2",
-      "list_id": "62e926e0ad2344544b0e7ecd",
-      "list_name": "PaperWork Made",
-      "customer": "Sun Automation",
-      "po_number": "386394",
-      "line": 2,
-      "part": "73468",
-      "due": "2027-01-22T18:50:00.000Z",
-      "overdue": false,
-      "value": 700.0,
-      "qty": 4.0,
-      "unit_price": 175.0,
-      "description": "(C7) PLATE OS CAPTURE",
       "status": "ok",
       "source": "gmail-or-folder"
     },
