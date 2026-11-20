@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T16:29:55.289430+00:00",
+  "generated_at": "2026-11-20T16:38:11.752201+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 115579.87,
   "overdue_total": 4726.0,
@@ -93,8 +93,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed2",
       "list_name": "Manual Machines",
-      "card_count": 5,
-      "value": 1384.87,
+      "card_count": 4,
+      "value": 1058.87,
       "missing": 0
     },
     {
@@ -121,8 +121,8 @@
     {
       "list_id": "643d227b2e31a2d2952a4a97",
       "list_name": "Okuma M560",
-      "card_count": 7,
-      "value": 5785.0,
+      "card_count": 6,
+      "value": 5335.0,
       "missing": 0
     },
     {
@@ -135,8 +135,15 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 7,
-      "value": 2540.0,
+      "card_count": 8,
+      "value": 2866.0,
+      "missing": 0
+    },
+    {
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "card_count": 1,
+      "value": 450.0,
       "missing": 0
     }
   ],
@@ -1600,25 +1607,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6ab6b8a8782be092b342ad66",
-      "name": "SUN PO 389104 Line 2",
-      "url": "https://trello.com/c/XAn6qkJa/2204-sun-po-389104-line-2",
-      "list_id": "643d227b2e31a2d2952a4a97",
-      "list_name": "Okuma M560",
-      "customer": "Sun Automation",
-      "po_number": "389104",
-      "line": 2,
-      "part": "803913",
-      "due": "2026-11-16T18:50:00.000Z",
-      "overdue": true,
-      "value": 450.0,
-      "qty": 1.0,
-      "unit_price": 450.0,
-      "description": "BUSHING BLOCK",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6a9af16854751df37d9a0b2c",
       "name": "SUN PO 388533 Line 32",
       "url": "https://trello.com/c/jfTN8Clb/2170-sun-po-388533-line-32",
@@ -1653,6 +1641,25 @@
       "qty": 2.0,
       "unit_price": 225.0,
       "description": "(PNT) SUPPORT SWITCH BOX ANILOX SRDC",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6ab6b8a8782be092b342ad66",
+      "name": "SUN PO 389104 Line 2",
+      "url": "https://trello.com/c/XAn6qkJa/2204-sun-po-389104-line-2",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "customer": "Sun Automation",
+      "po_number": "389104",
+      "line": 2,
+      "part": "803913",
+      "due": "2026-11-16T18:50:00.000Z",
+      "overdue": true,
+      "value": 450.0,
+      "qty": 1.0,
+      "unit_price": 450.0,
+      "description": "BUSHING BLOCK",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1850,8 +1857,8 @@
       "card_id": "6ad65e5c14b57e344ce3d255",
       "name": "SUN PO 389682 Line 3",
       "url": "https://trello.com/c/Le6Dv6iM/2241-sun-po-389682-line-3",
-      "list_id": "62e926e0ad2344544b0e7ed2",
-      "list_name": "Manual Machines",
+      "list_id": "63f62315f46e7c220859abe3",
+      "list_name": "Inspection",
       "customer": "Sun Automation",
       "po_number": "389682",
       "line": 3,
