@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-20T18:16:17.325372+00:00",
+  "generated_at": "2026-11-20T18:29:23.351624+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 115129.87,
-  "overdue_total": 4276.0,
+  "grand_total": 116414.87,
+  "overdue_total": 5561.0,
   "missing_count": 8,
-  "card_count": 137,
+  "card_count": 140,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -138,13 +138,20 @@
       "card_count": 8,
       "value": 2866.0,
       "missing": 0
+    },
+    {
+      "list_id": "62e926e0ad2344544b0e7ed9",
+      "list_name": "Ready to Ship",
+      "card_count": 3,
+      "value": 1285.0,
+      "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 130,
-      "value": 115129.87,
+      "card_count": 133,
+      "value": 116414.87,
       "missing": 1
     },
     {
@@ -1448,6 +1455,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6acf976bddc79fbf974e5b42",
+      "name": "SUN PO 389581 Line 1",
+      "url": "https://trello.com/c/ZEO2W4hE/2230-sun-po-389581-line-1",
+      "list_id": "62e926e0ad2344544b0e7ed9",
+      "list_name": "Ready to Ship",
+      "customer": "Sun Automation",
+      "po_number": "389581",
+      "line": 1,
+      "part": "105688",
+      "due": "2026-11-13T18:50:00.000Z",
+      "overdue": true,
+      "value": 550.0,
+      "qty": 2.0,
+      "unit_price": 275.0,
+      "description": "CONNECTOR",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6a8ecd2223e962b8c16bd6cf",
       "name": "SUN PO 388320 Line 14",
       "url": "https://trello.com/c/tuvI2IGM/2132-sun-po-388320-line-14",
@@ -1634,6 +1660,25 @@
       "qty": 2.0,
       "unit_price": 225.0,
       "description": "(PNT) SUPPORT SWITCH BOX ANILOX SRDC",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6ab6b8a8782be092b342ad66",
+      "name": "SUN PO 389104 Line 2",
+      "url": "https://trello.com/c/XAn6qkJa/2204-sun-po-389104-line-2",
+      "list_id": "62e926e0ad2344544b0e7ed9",
+      "list_name": "Ready to Ship",
+      "customer": "Sun Automation",
+      "po_number": "389104",
+      "line": 2,
+      "part": "803913",
+      "due": "2026-11-16T18:50:00.000Z",
+      "overdue": true,
+      "value": 450.0,
+      "qty": 1.0,
+      "unit_price": 450.0,
+      "description": "BUSHING BLOCK",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -2029,6 +2074,25 @@
       "part": "416032",
       "due": "2027-01-05T18:50:00.000Z",
       "overdue": false,
+      "value": 285.0,
+      "qty": 3.0,
+      "unit_price": 95.0,
+      "description": "HANDWHEEL",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6ae3503ad6aa67836b134b9e",
+      "name": "SUN PO 389769 Line 1",
+      "url": "https://trello.com/c/US7DITlX/2253-sun-po-389769-line-1",
+      "list_id": "62e926e0ad2344544b0e7ed9",
+      "list_name": "Ready to Ship",
+      "customer": "Sun Automation",
+      "po_number": "389769",
+      "line": 1,
+      "part": "416032",
+      "due": "2026-11-17T18:50:00.000Z",
+      "overdue": true,
       "value": 285.0,
       "qty": 3.0,
       "unit_price": 95.0,
