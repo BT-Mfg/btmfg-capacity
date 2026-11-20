@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T12:40:36.603460+00:00",
+  "generated_at": "2026-11-20T12:57:08.060166+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 116579.87,
   "overdue_total": 5561.0,
@@ -37,8 +37,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ecd",
       "list_name": "PaperWork Made",
-      "card_count": 58,
-      "value": 45240.0,
+      "card_count": 55,
+      "value": 43890.0,
       "missing": 0
     },
     {
@@ -65,8 +65,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed1",
       "list_name": "Ready for Machining",
-      "card_count": 19,
-      "value": 18775.0,
+      "card_count": 18,
+      "value": 16935.0,
       "missing": 1
     },
     {
@@ -79,8 +79,8 @@
     {
       "list_id": "658d7db3858d04ad6bed5324",
       "list_name": "Send to Laser",
-      "card_count": 6,
-      "value": 4810.0,
+      "card_count": 5,
+      "value": 3490.0,
       "missing": 0
     },
     {
@@ -100,22 +100,22 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed4",
       "list_name": "VM1 (Amera-Seki) OFFLINE",
-      "card_count": 1,
-      "value": 3375.0,
+      "card_count": 3,
+      "value": 5345.0,
       "missing": 0
     },
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 5,
-      "value": 3310.0,
+      "card_count": 4,
+      "value": 2760.0,
       "missing": 0
     },
     {
       "list_id": "643d227b2e31a2d2952a4a97",
       "list_name": "Okuma M560",
-      "card_count": 4,
-      "value": 3245.0,
+      "card_count": 7,
+      "value": 5785.0,
       "missing": 0
     },
     {
@@ -128,8 +128,8 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 9,
-      "value": 2990.0,
+      "card_count": 10,
+      "value": 3540.0,
       "missing": 0
     }
   ],
@@ -399,8 +399,8 @@
       "card_id": "6a98600a131e667bb94ce7db",
       "name": "SUN PO 388630 Line 1",
       "url": "https://trello.com/c/1sqUFMlR/2145-sun-po-388630-line-1",
-      "list_id": "62e926e0ad2344544b0e7ed1",
-      "list_name": "Ready for Machining",
+      "list_id": "643d227b2e31a2d2952a4a97",
+      "list_name": "Okuma M560",
       "customer": "Sun Automation",
       "po_number": "388630",
       "line": 1,
@@ -608,8 +608,8 @@
       "card_id": "6a8ecd23bc6e50507fba099d",
       "name": "SUN PO 388320 Line 15",
       "url": "https://trello.com/c/i2zGKF1R/2133-sun-po-388320-line-15",
-      "list_id": "658d7db3858d04ad6bed5324",
-      "list_name": "Send to Laser",
+      "list_id": "62e926e0ad2344544b0e7ed4",
+      "list_name": "VM1 (Amera-Seki) OFFLINE",
       "customer": "Sun Automation",
       "po_number": "388320",
       "line": 15,
@@ -1251,25 +1251,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6a8ecd2100584e68aa8e41f9",
-      "name": "SUN PO 388320 Line 13",
-      "url": "https://trello.com/c/adiC1MnR/2131-sun-po-388320-line-13",
-      "list_id": "62e926e0ad2344544b0e7ecd",
-      "list_name": "PaperWork Made",
-      "customer": "Sun Automation",
-      "po_number": "388320",
-      "line": 13,
-      "part": "11989400",
-      "due": "2026-11-20T18:50:00.000Z",
-      "overdue": false,
-      "value": 650.0,
-      "qty": 5.0,
-      "unit_price": 130.0,
-      "description": "(C5) ANGLE OVERTRAVEL SWITCH VT SERVO",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6ad65e5f76afa64167e060f9",
       "name": "SUN PO 389682 Line 7",
       "url": "https://trello.com/c/hZqRX22u/2245-sun-po-389682-line-7",
@@ -1304,6 +1285,25 @@
       "qty": 2.0,
       "unit_price": 325.0,
       "description": "CLAMP GF KNIFE (H)",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6a8ecd2100584e68aa8e41f9",
+      "name": "SUN PO 388320 Line 13",
+      "url": "https://trello.com/c/adiC1MnR/2131-sun-po-388320-line-13",
+      "list_id": "62e926e0ad2344544b0e7ed4",
+      "list_name": "VM1 (Amera-Seki) OFFLINE",
+      "customer": "Sun Automation",
+      "po_number": "388320",
+      "line": 13,
+      "part": "11989400",
+      "due": "2026-11-20T18:50:00.000Z",
+      "overdue": false,
+      "value": 650.0,
+      "qty": 5.0,
+      "unit_price": 130.0,
+      "description": "(C5) ANGLE OVERTRAVEL SWITCH VT SERVO",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1403,25 +1403,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6acf976bddc79fbf974e5b42",
-      "name": "SUN PO 389581 Line 1",
-      "url": "https://trello.com/c/ZEO2W4hE/2230-sun-po-389581-line-1",
-      "list_id": "62e926e0ad2344544b0e7ed5",
-      "list_name": "VM2 (Doosan DNM4500)",
-      "customer": "Sun Automation",
-      "po_number": "389581",
-      "line": 1,
-      "part": "105688",
-      "due": "2026-11-13T18:50:00.000Z",
-      "overdue": true,
-      "value": 550.0,
-      "qty": 2.0,
-      "unit_price": 275.0,
-      "description": "CONNECTOR",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6af1cfd2fd56d8ff92fb8839",
       "name": "SUN PO 390250 Line 8",
       "url": "https://trello.com/c/grlLqC5U/2293-sun-po-390250-line-8",
@@ -1456,6 +1437,25 @@
       "qty": 1.0,
       "unit_price": 550.0,
       "description": "REDUCER SUPPORT",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6acf976bddc79fbf974e5b42",
+      "name": "SUN PO 389581 Line 1",
+      "url": "https://trello.com/c/ZEO2W4hE/2230-sun-po-389581-line-1",
+      "list_id": "63f62315f46e7c220859abe3",
+      "list_name": "Inspection",
+      "customer": "Sun Automation",
+      "po_number": "389581",
+      "line": 1,
+      "part": "105688",
+      "due": "2026-11-13T18:50:00.000Z",
+      "overdue": true,
+      "value": 550.0,
+      "qty": 2.0,
+      "unit_price": 275.0,
+      "description": "CONNECTOR",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1745,11 +1745,30 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6a99cd9d75a8b97364f55cc9",
+      "name": "SUN PO 388660 Line 2",
+      "url": "https://trello.com/c/bdAR1gqT/2153-sun-po-388660-line-2",
+      "list_id": "643d227b2e31a2d2952a4a97",
+      "list_name": "Okuma M560",
+      "customer": "Sun Automation",
+      "po_number": "388660",
+      "line": 2,
+      "part": "12132600",
+      "due": "2026-12-18T18:50:00.000Z",
+      "overdue": false,
+      "value": 350.0,
+      "qty": 2.0,
+      "unit_price": 175.0,
+      "description": "(C1) DOOR GREASE SRDC",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6a98600b4a0ad62cceb4d8a4",
       "name": "SUN PO 388630 Line 2",
       "url": "https://trello.com/c/WzIyl0fa/2146-sun-po-388630-line-2",
-      "list_id": "62e926e0ad2344544b0e7ecd",
-      "list_name": "PaperWork Made",
+      "list_id": "643d227b2e31a2d2952a4a97",
+      "list_name": "Okuma M560",
       "customer": "Sun Automation",
       "po_number": "388630",
       "line": 2,
@@ -1779,25 +1798,6 @@
       "qty": 2.0,
       "unit_price": 175.0,
       "description": "PLATE MOUNTING",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6a99cd9d75a8b97364f55cc9",
-      "name": "SUN PO 388660 Line 2",
-      "url": "https://trello.com/c/bdAR1gqT/2153-sun-po-388660-line-2",
-      "list_id": "62e926e0ad2344544b0e7ecd",
-      "list_name": "PaperWork Made",
-      "customer": "Sun Automation",
-      "po_number": "388660",
-      "line": 2,
-      "part": "12132600",
-      "due": "2026-12-18T18:50:00.000Z",
-      "overdue": false,
-      "value": 350.0,
-      "qty": 2.0,
-      "unit_price": 175.0,
-      "description": "(C1) DOOR GREASE SRDC",
       "status": "ok",
       "source": "gmail-or-folder"
     },
