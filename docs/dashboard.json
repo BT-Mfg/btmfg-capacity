@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T13:29:55.068471+00:00",
+  "generated_at": "2026-11-20T13:40:09.347919+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 116579.87,
   "overdue_total": 5561.0,
@@ -1745,25 +1745,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6a99cd9d75a8b97364f55cc9",
-      "name": "SUN PO 388660 Line 2",
-      "url": "https://trello.com/c/bdAR1gqT/2153-sun-po-388660-line-2",
-      "list_id": "643d227b2e31a2d2952a4a97",
-      "list_name": "Okuma M560",
-      "customer": "Sun Automation",
-      "po_number": "388660",
-      "line": 2,
-      "part": "12132600",
-      "due": "2026-12-18T18:50:00.000Z",
-      "overdue": false,
-      "value": 350.0,
-      "qty": 2.0,
-      "unit_price": 175.0,
-      "description": "(C1) DOOR GREASE SRDC",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6a98600b4a0ad62cceb4d8a4",
       "name": "SUN PO 388630 Line 2",
       "url": "https://trello.com/c/WzIyl0fa/2146-sun-po-388630-line-2",
@@ -1798,6 +1779,25 @@
       "qty": 2.0,
       "unit_price": 175.0,
       "description": "PLATE MOUNTING",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6a99cd9d75a8b97364f55cc9",
+      "name": "SUN PO 388660 Line 2",
+      "url": "https://trello.com/c/bdAR1gqT/2153-sun-po-388660-line-2",
+      "list_id": "643d227b2e31a2d2952a4a97",
+      "list_name": "Okuma M560",
+      "customer": "Sun Automation",
+      "po_number": "388660",
+      "line": 2,
+      "part": "12132600",
+      "due": "2026-12-18T18:50:00.000Z",
+      "overdue": false,
+      "value": 350.0,
+      "qty": 2.0,
+      "unit_price": 175.0,
+      "description": "(C1) DOOR GREASE SRDC",
       "status": "ok",
       "source": "gmail-or-folder"
     },
