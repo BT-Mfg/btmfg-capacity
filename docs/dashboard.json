@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-23T20:25:42.151591+00:00",
+  "generated_at": "2026-11-23T20:33:59.020169+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 110178.87,
-  "overdue_total": 7600.0,
+  "grand_total": 108678.87,
+  "overdue_total": 6100.0,
   "missing_count": 8,
-  "card_count": 134,
+  "card_count": 133,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -121,8 +121,8 @@
     {
       "list_id": "643d227b2e31a2d2952a4a97",
       "list_name": "Okuma M560",
-      "card_count": 5,
-      "value": 3495.0,
+      "card_count": 4,
+      "value": 2245.0,
       "missing": 0
     },
     {
@@ -135,16 +135,23 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 9,
-      "value": 5240.0,
+      "card_count": 7,
+      "value": 2540.0,
+      "missing": 0
+    },
+    {
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "card_count": 2,
+      "value": 2450.0,
       "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 127,
-      "value": 110178.87,
+      "card_count": 126,
+      "value": 108678.87,
       "missing": 1
     },
     {
@@ -517,25 +524,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6ab6bc8f4dcb9ab3780bf726",
-      "name": "SUN PO 388976 Line 2",
-      "url": "https://trello.com/c/bihyFRuV/2207-sun-po-388976-line-2",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
-      "customer": "Sun Automation",
-      "po_number": "388976",
-      "line": 2,
-      "part": "402181",
-      "due": "2026-10-23T18:50:00.000Z",
-      "overdue": true,
-      "value": 1500.0,
-      "qty": 1.0,
-      "unit_price": 1500.0,
-      "description": "COUPLING PERMANENT MESH",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6af1cfd301a049ac653c0252",
       "name": "SUN PO 390250 Line 9",
       "url": "https://trello.com/c/5MZUaMmV/2294-sun-po-390250-line-9",
@@ -669,25 +657,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6ae350641c290a329f5624ac",
-      "name": "SUN PO 389836 Line 1",
-      "url": "https://trello.com/c/E7JePljE/2255-sun-po-389836-line-1",
-      "list_id": "643d227b2e31a2d2952a4a97",
-      "list_name": "Okuma M560",
-      "customer": "Sun Automation",
-      "po_number": "389836",
-      "line": 1,
-      "part": "11406",
-      "due": "2026-11-20T18:50:00.000Z",
-      "overdue": true,
-      "value": 1250.0,
-      "qty": 10.0,
-      "unit_price": 125.0,
-      "description": "ARM ROCKER",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6af1cfdb0937d6e5b8bf20b6",
       "name": "SUN PO 390250 Line 16",
       "url": "https://trello.com/c/kGnZkRpt/2301-sun-po-390250-line-16",
@@ -703,6 +672,25 @@
       "qty": 1.0,
       "unit_price": 1250.0,
       "description": "BRACKET",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6ae350641c290a329f5624ac",
+      "name": "SUN PO 389836 Line 1",
+      "url": "https://trello.com/c/E7JePljE/2255-sun-po-389836-line-1",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "customer": "Sun Automation",
+      "po_number": "389836",
+      "line": 1,
+      "part": "11406",
+      "due": "2026-11-20T18:50:00.000Z",
+      "overdue": true,
+      "value": 1250.0,
+      "qty": 10.0,
+      "unit_price": 125.0,
+      "description": "ARM ROCKER",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -748,8 +736,8 @@
       "card_id": "6acf976eefa80d6130124e89",
       "name": "SUN PO 389581 Line 4",
       "url": "https://trello.com/c/9dswpbKH/2233-sun-po-389581-line-4",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
       "customer": "Sun Automation",
       "po_number": "389581",
       "line": 4,
