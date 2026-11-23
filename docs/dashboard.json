@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T17:47:31.200512+00:00",
+  "generated_at": "2026-11-23T17:58:48.421187+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 110178.87,
   "overdue_total": 6790.0,
@@ -114,8 +114,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 6,
-      "value": 4900.0,
+      "card_count": 5,
+      "value": 3700.0,
       "missing": 0
     },
     {
@@ -135,8 +135,8 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 8,
-      "value": 4040.0,
+      "card_count": 9,
+      "value": 5240.0,
       "missing": 0
     }
   ],
@@ -726,25 +726,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6acf976eefa80d6130124e89",
-      "name": "SUN PO 389581 Line 4",
-      "url": "https://trello.com/c/9dswpbKH/2233-sun-po-389581-line-4",
-      "list_id": "62e926e0ad2344544b0e7ed5",
-      "list_name": "VM2 (Doosan DNM4500)",
-      "customer": "Sun Automation",
-      "po_number": "389581",
-      "line": 4,
-      "part": "JP000328",
-      "due": "2026-11-13T18:50:00.000Z",
-      "overdue": true,
-      "value": 1200.0,
-      "qty": 1.0,
-      "unit_price": 1200.0,
-      "description": "SCREW LATERAL ADJUST",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6af1ceffd3dbbbf0073e5a5c",
       "name": "SUN PO 390108 Line 1",
       "url": "https://trello.com/c/jUuuSLoR/2278-sun-po-390108-line-1",
@@ -760,6 +741,25 @@
       "qty": 2.0,
       "unit_price": 600.0,
       "description": "STABILIZER",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6acf976eefa80d6130124e89",
+      "name": "SUN PO 389581 Line 4",
+      "url": "https://trello.com/c/9dswpbKH/2233-sun-po-389581-line-4",
+      "list_id": "63f62315f46e7c220859abe3",
+      "list_name": "Inspection",
+      "customer": "Sun Automation",
+      "po_number": "389581",
+      "line": 4,
+      "part": "JP000328",
+      "due": "2026-11-13T18:50:00.000Z",
+      "overdue": true,
+      "value": 1200.0,
+      "qty": 1.0,
+      "unit_price": 1200.0,
+      "description": "SCREW LATERAL ADJUST",
       "status": "ok",
       "source": "gmail-or-folder"
     },
