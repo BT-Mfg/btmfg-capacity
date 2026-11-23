@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-23T20:33:59.020169+00:00",
+  "generated_at": "2026-11-23T20:35:08.369043+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 108678.87,
-  "overdue_total": 6100.0,
+  "grand_total": 106228.87,
+  "overdue_total": 3650.0,
   "missing_count": 8,
-  "card_count": 133,
+  "card_count": 131,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -138,20 +138,13 @@
       "card_count": 7,
       "value": 2540.0,
       "missing": 0
-    },
-    {
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "card_count": 2,
-      "value": 2450.0,
-      "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 126,
-      "value": 108678.87,
+      "card_count": 124,
+      "value": 106228.87,
       "missing": 1
     },
     {
@@ -676,25 +669,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6ae350641c290a329f5624ac",
-      "name": "SUN PO 389836 Line 1",
-      "url": "https://trello.com/c/E7JePljE/2255-sun-po-389836-line-1",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "389836",
-      "line": 1,
-      "part": "11406",
-      "due": "2026-11-20T18:50:00.000Z",
-      "overdue": true,
-      "value": 1250.0,
-      "qty": 10.0,
-      "unit_price": 125.0,
-      "description": "ARM ROCKER",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6ad65e63c05dab85ce719b34",
       "name": "SUN PO 389682 Line 11",
       "url": "https://trello.com/c/3UYcooCM/2249-sun-po-389682-line-11",
@@ -729,25 +703,6 @@
       "qty": 2.0,
       "unit_price": 600.0,
       "description": "STABILIZER",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6acf976eefa80d6130124e89",
-      "name": "SUN PO 389581 Line 4",
-      "url": "https://trello.com/c/9dswpbKH/2233-sun-po-389581-line-4",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "389581",
-      "line": 4,
-      "part": "JP000328",
-      "due": "2026-11-13T18:50:00.000Z",
-      "overdue": true,
-      "value": 1200.0,
-      "qty": 1.0,
-      "unit_price": 1200.0,
-      "description": "SCREW LATERAL ADJUST",
       "status": "ok",
       "source": "gmail-or-folder"
     },
