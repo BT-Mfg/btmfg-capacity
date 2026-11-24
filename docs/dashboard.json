@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-24T19:41:19.458147+00:00",
+  "generated_at": "2026-11-24T19:55:06.735324+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 105056.13,
   "overdue_total": 3455.0,
@@ -100,8 +100,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed3",
       "list_name": "TC1 (Haas TL-1)",
-      "card_count": 6,
-      "value": 2330.0,
+      "card_count": 5,
+      "value": 3155.0,
       "missing": 0
     },
     {
@@ -114,15 +114,15 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 13,
-      "value": 12310.0,
+      "card_count": 15,
+      "value": 12610.0,
       "missing": 0
     },
     {
       "list_id": "643d227b2e31a2d2952a4a97",
       "list_name": "Okuma M560",
-      "card_count": 6,
-      "value": 6310.0,
+      "card_count": 5,
+      "value": 5185.0,
       "missing": 0
     },
     {
@@ -729,8 +729,8 @@
       "card_id": "6ac51ed9e4e750b75d069e19",
       "name": "SUN PO 389403 Line 8",
       "url": "https://trello.com/c/OPUTX12z/2228-sun-po-389403-line-8",
-      "list_id": "643d227b2e31a2d2952a4a97",
-      "list_name": "Okuma M560",
+      "list_id": "62e926e0ad2344544b0e7ed3",
+      "list_name": "TC1 (Haas TL-1)",
       "customer": "Sun Automation",
       "po_number": "389403",
       "line": 8,
@@ -2078,8 +2078,8 @@
       "card_id": "6ad65e62824172aee54f1bd4",
       "name": "SUN PO 389682 Line 10",
       "url": "https://trello.com/c/m9JFqtuM/2248-sun-po-389682-line-10",
-      "list_id": "62e926e0ad2344544b0e7ed3",
-      "list_name": "TC1 (Haas TL-1)",
+      "list_id": "62e926e0ad2344544b0e7ed5",
+      "list_name": "VM2 (Doosan DNM4500)",
       "customer": "Sun Automation",
       "po_number": "389682",
       "line": 10,
@@ -2303,6 +2303,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6acf976da4337e675d0e56da",
+      "name": "SUN PO 389581 Line 3",
+      "url": "https://trello.com/c/w62t9oeH/2232-sun-po-389581-line-3",
+      "list_id": "62e926e0ad2344544b0e7ed5",
+      "list_name": "VM2 (Doosan DNM4500)",
+      "customer": "Sun Automation",
+      "po_number": "389581",
+      "line": 3,
+      "part": "416364",
+      "due": "2026-11-23T18:50:00.000Z",
+      "overdue": true,
+      "value": 95.0,
+      "qty": 1.0,
+      "unit_price": 95.0,
+      "description": "EXTENSION SHAFT",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6afb6dbcfe85864615143166",
       "name": "SUN PO 390460 Line 4",
       "url": "https://trello.com/c/nfX7X6DS/2319-sun-po-390460-line-4",
@@ -2318,25 +2337,6 @@
       "qty": 1.0,
       "unit_price": 95.0,
       "description": "STUD IDLER FIXED",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6acf976da4337e675d0e56da",
-      "name": "SUN PO 389581 Line 3",
-      "url": "https://trello.com/c/w62t9oeH/2232-sun-po-389581-line-3",
-      "list_id": "62e926e0ad2344544b0e7ed3",
-      "list_name": "TC1 (Haas TL-1)",
-      "customer": "Sun Automation",
-      "po_number": "389581",
-      "line": 3,
-      "part": "416364",
-      "due": "2026-11-23T18:50:00.000Z",
-      "overdue": true,
-      "value": 95.0,
-      "qty": 1.0,
-      "unit_price": 95.0,
-      "description": "EXTENSION SHAFT",
       "status": "ok",
       "source": "gmail-or-folder"
     },
