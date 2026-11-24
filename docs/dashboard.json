@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-24T17:08:53.989832+00:00",
+  "generated_at": "2026-11-24T17:24:08.471580+00:00",
   "board_id": "YG0Dh7Kp",
-  "grand_total": 106228.87,
+  "grand_total": 105251.13,
   "overdue_total": 3650.0,
   "missing_count": 8,
-  "card_count": 131,
+  "card_count": 127,
   "by_list": [
     {
       "list_id": "62e926e0ad2344544b0e7ec9",
@@ -138,20 +138,13 @@
       "card_count": 6,
       "value": 2395.0,
       "missing": 0
-    },
-    {
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "card_count": 4,
-      "value": 977.74,
-      "missing": 0
     }
   ],
   "by_customer": [
     {
       "customer": "Sun Automation",
-      "card_count": 124,
-      "value": 106228.87,
+      "card_count": 120,
+      "value": 105251.13,
       "missing": 1
     },
     {
@@ -1778,25 +1771,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6afb6dbbe33bae69e3ed27c4",
-      "name": "SUN PO 390460 Line 3",
-      "url": "https://trello.com/c/u05uPEkB/2318-sun-po-390460-line-3",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "390460",
-      "line": 3,
-      "part": "17769",
-      "due": "2026-12-17T18:50:00.000Z",
-      "overdue": false,
-      "value": 311.6,
-      "qty": 1.0,
-      "unit_price": 311.6,
-      "description": "SHAFT ROCKER 1.75 X 101",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6ac51ed84bf92f6377dd3669",
       "name": "SUN PO 389403 Line 7",
       "url": "https://trello.com/c/Rkdp4kP5/2227-sun-po-389403-line-7",
@@ -1945,44 +1919,6 @@
       "qty": 2.0,
       "unit_price": 135.0,
       "description": "BAR MOUNTING REDUCER",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6ab6bc8e1e8710fd7b4578fc",
-      "name": "SUN PO 388976 Line 1",
-      "url": "https://trello.com/c/f2vf9FHf/2206-sun-po-388976-line-1",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "388976",
-      "line": 1,
-      "part": "10165",
-      "due": "2026-12-21T18:50:00.000Z",
-      "overdue": false,
-      "value": 260.57,
-      "qty": 1.0,
-      "unit_price": 260.57,
-      "description": "SHAFT ROCKER 1.75 X 084.1",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6abe62e2767e83f2adf5c5d5",
-      "name": "SUN PO 389218 Line 1",
-      "url": "https://trello.com/c/TUlRc0aP/2211-sun-po-389218-line-1",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "389218",
-      "line": 1,
-      "part": "10165",
-      "due": "2026-12-21T18:50:00.000Z",
-      "overdue": false,
-      "value": 260.57,
-      "qty": 1.0,
-      "unit_price": 260.57,
-      "description": "SHAFT ROCKER 1.75 X 084.1",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -2306,25 +2242,6 @@
       "qty": 2.0,
       "unit_price": 80.0,
       "description": "SCREW CLAMP",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6ac51ed5a5d7a3b8ccc1bfcd",
-      "name": "SUN PO 389403 Line 4",
-      "url": "https://trello.com/c/ug5pJrbt/2224-sun-po-389403-line-4",
-      "list_id": "6ae24b4c645042e7a0bfa059",
-      "list_name": "Invoice Now",
-      "customer": "Sun Automation",
-      "po_number": "389403",
-      "line": 4,
-      "part": "11283100",
-      "due": "2026-11-27T18:50:00.000Z",
-      "overdue": false,
-      "value": 145.0,
-      "qty": 1.0,
-      "unit_price": 145.0,
-      "description": "BLOCK SPRING PLUNGER (P1)",
       "status": "ok",
       "source": "gmail-or-folder"
     },
