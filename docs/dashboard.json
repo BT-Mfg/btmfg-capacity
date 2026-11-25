@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T18:33:23.291980+00:00",
+  "generated_at": "2026-11-25T18:40:33.890606+00:00",
   "board_id": "YG0Dh7Kp",
   "grand_total": 105056.13,
   "overdue_total": 3455.0,
@@ -37,8 +37,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ecd",
       "list_name": "PaperWork Made",
-      "card_count": 44,
-      "value": 35565.0,
+      "card_count": 43,
+      "value": 34935.0,
       "missing": 0
     },
     {
@@ -100,8 +100,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed3",
       "list_name": "TC1 (Haas TL-1)",
-      "card_count": 5,
-      "value": 3005.0,
+      "card_count": 2,
+      "value": 1215.0,
       "missing": 0
     },
     {
@@ -114,8 +114,8 @@
     {
       "list_id": "62e926e0ad2344544b0e7ed5",
       "list_name": "VM2 (Doosan DNM4500)",
-      "card_count": 14,
-      "value": 11105.0,
+      "card_count": 17,
+      "value": 12895.0,
       "missing": 0
     },
     {
@@ -135,8 +135,15 @@
     {
       "list_id": "63f62315f46e7c220859abe3",
       "list_name": "Inspection",
-      "card_count": 8,
-      "value": 3360.0,
+      "card_count": 7,
+      "value": 3045.0,
+      "missing": 0
+    },
+    {
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "card_count": 2,
+      "value": 945.0,
       "missing": 0
     }
   ],
@@ -729,8 +736,8 @@
       "card_id": "6ac51ed9e4e750b75d069e19",
       "name": "SUN PO 389403 Line 8",
       "url": "https://trello.com/c/OPUTX12z/2228-sun-po-389403-line-8",
-      "list_id": "62e926e0ad2344544b0e7ed3",
-      "list_name": "TC1 (Haas TL-1)",
+      "list_id": "62e926e0ad2344544b0e7ed5",
+      "list_name": "VM2 (Doosan DNM4500)",
       "customer": "Sun Automation",
       "po_number": "389403",
       "line": 8,
@@ -1220,25 +1227,6 @@
       "source": "gmail-or-folder"
     },
     {
-      "card_id": "6af1cf893b932669b2d85aef",
-      "name": "SUN PO 390162 Line 1",
-      "url": "https://trello.com/c/HOHoy4X3/2283-sun-po-390162-line-1",
-      "list_id": "62e926e0ad2344544b0e7ecd",
-      "list_name": "PaperWork Made",
-      "customer": "Sun Automation",
-      "po_number": "390162",
-      "line": 1,
-      "part": "254715",
-      "due": "2026-12-18T18:50:00.000Z",
-      "overdue": false,
-      "value": 630.0,
-      "qty": 2.0,
-      "unit_price": 315.0,
-      "description": "STUD SWIVEL ARM",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
       "card_id": "6ad65e5e2a77f93abcc54a42",
       "name": "SUN PO 389682 Line 6",
       "url": "https://trello.com/c/C37WrB0B/2244-sun-po-389682-line-6",
@@ -1254,6 +1242,25 @@
       "qty": 2.0,
       "unit_price": 315.0,
       "description": "(C7) CLIP ASSEMBLY",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
+      "card_id": "6af1cf893b932669b2d85aef",
+      "name": "SUN PO 390162 Line 1",
+      "url": "https://trello.com/c/HOHoy4X3/2283-sun-po-390162-line-1",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
+      "customer": "Sun Automation",
+      "po_number": "390162",
+      "line": 1,
+      "part": "254715",
+      "due": "2026-12-18T18:50:00.000Z",
+      "overdue": false,
+      "value": 630.0,
+      "qty": 2.0,
+      "unit_price": 315.0,
+      "description": "STUD SWIVEL ARM",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1391,6 +1398,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6af1cfcc687ff700f566c1e6",
+      "name": "SUN PO 390250 Line 3",
+      "url": "https://trello.com/c/qA3mTcfl/2288-sun-po-390250-line-3",
+      "list_id": "62e926e0ad2344544b0e7ed5",
+      "list_name": "VM2 (Doosan DNM4500)",
+      "customer": "Sun Automation",
+      "po_number": "390250",
+      "line": 3,
+      "part": "40922502",
+      "due": "2026-12-18T18:50:00.000Z",
+      "overdue": false,
+      "value": 500.0,
+      "qty": 2.0,
+      "unit_price": 250.0,
+      "description": "PULLEY BELT TIMING",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6a9af16487ec7c3d5b3aa019",
       "name": "SUN PO 388533 Line 19",
       "url": "https://trello.com/c/yFentrpH/2166-sun-po-388533-line-19",
@@ -1406,25 +1432,6 @@
       "qty": 4.0,
       "unit_price": 125.0,
       "description": "BLOCK STOP INK BUCKET SRDC",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6af1cfcc687ff700f566c1e6",
-      "name": "SUN PO 390250 Line 3",
-      "url": "https://trello.com/c/qA3mTcfl/2288-sun-po-390250-line-3",
-      "list_id": "62e926e0ad2344544b0e7ed3",
-      "list_name": "TC1 (Haas TL-1)",
-      "customer": "Sun Automation",
-      "po_number": "390250",
-      "line": 3,
-      "part": "40922502",
-      "due": "2026-12-18T18:50:00.000Z",
-      "overdue": false,
-      "value": 500.0,
-      "qty": 2.0,
-      "unit_price": 250.0,
-      "description": "PULLEY BELT TIMING",
       "status": "ok",
       "source": "gmail-or-folder"
     },
@@ -1755,8 +1762,8 @@
       "card_id": "6ad65e5d53bbf8ba384607eb",
       "name": "SUN PO 389682 Line 4",
       "url": "https://trello.com/c/WjsEawiy/2242-sun-po-389682-line-4",
-      "list_id": "63f62315f46e7c220859abe3",
-      "list_name": "Inspection",
+      "list_id": "6ae24b4c645042e7a0bfa059",
+      "list_name": "Invoice Now",
       "customer": "Sun Automation",
       "po_number": "389682",
       "line": 4,
@@ -2170,6 +2177,25 @@
       "source": "gmail-or-folder"
     },
     {
+      "card_id": "6ac51ed21f4e9f95d175d7b6",
+      "name": "SUN PO 389403 Line 1",
+      "url": "https://trello.com/c/YfumstZ1/2221-sun-po-389403-line-1",
+      "list_id": "62e926e0ad2344544b0e7ed5",
+      "list_name": "VM2 (Doosan DNM4500)",
+      "customer": "Sun Automation",
+      "po_number": "389403",
+      "line": 1,
+      "part": "108167",
+      "due": "2026-11-25T18:50:00.000Z",
+      "overdue": false,
+      "value": 165.0,
+      "qty": 1.0,
+      "unit_price": 165.0,
+      "description": "END CAP - LCR",
+      "status": "ok",
+      "source": "gmail-or-folder"
+    },
+    {
       "card_id": "6af1cfce777a209c99386bd2",
       "name": "SUN PO 390250 Line 5",
       "url": "https://trello.com/c/CS34WLEk/2290-sun-po-390250-line-5",
@@ -2185,25 +2211,6 @@
       "qty": 1.0,
       "unit_price": 165.0,
       "description": "SPACER LOWER FEED ROLL",
-      "status": "ok",
-      "source": "gmail-or-folder"
-    },
-    {
-      "card_id": "6ac51ed21f4e9f95d175d7b6",
-      "name": "SUN PO 389403 Line 1",
-      "url": "https://trello.com/c/YfumstZ1/2221-sun-po-389403-line-1",
-      "list_id": "62e926e0ad2344544b0e7ed3",
-      "list_name": "TC1 (Haas TL-1)",
-      "customer": "Sun Automation",
-      "po_number": "389403",
-      "line": 1,
-      "part": "108167",
-      "due": "2026-11-25T18:50:00.000Z",
-      "overdue": false,
-      "value": 165.0,
-      "qty": 1.0,
-      "unit_price": 165.0,
-      "description": "END CAP - LCR",
       "status": "ok",
       "source": "gmail-or-folder"
     },
